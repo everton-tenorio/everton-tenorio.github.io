@@ -17,13 +17,10 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Navigate to project directory
-        run: cd profile/
-
       - name: Install dependencies
+        # working-directory: ./profile
+        run: cd profile
         run: npm install
-
-      - name: Build Vue.js app
         run: npm run build
 
       - name: Deploy to GitHub Pages
