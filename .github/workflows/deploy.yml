@@ -17,10 +17,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: profile directory
-        working-directory: ./profile
-        run: ls
-
       - name: Install dependencies
         run: npm install
 
