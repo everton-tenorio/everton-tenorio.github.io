@@ -3,7 +3,11 @@
     <div class="profile">
       <img src="https://avatars.githubusercontent.com/u/114461163?v=4" alt="Foto de Perfil" class="profile-img">
       <h1>Everton Tenório</h1>
-      <p>@everton.py</p>
+      <p class="contact">
+        <a href="https://t.me/evertontenorio" target="_blank" class="telegram-icon">
+          <i class="fab fa-telegram-plane" style="color: black"></i>
+        </a>
+      </p>
     </div>
     <div class="links">
       <a href="https://github.com/everton-tenorio"><button class="link-btn"><i class="fa-brands fa-github"></i> GitHub</button></a>
@@ -62,7 +66,7 @@ export default {
 
 <style>
 #app {
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 10px;
 }
 
@@ -76,7 +80,7 @@ export default {
   font-family: 'Ubuntu', sans-serif;
   margin-top: 5px;
   font-size: 25px;
-  color: white;
+  color: black;
 }
 
 .profile p {
@@ -91,6 +95,11 @@ export default {
   border: 3px solid black;
 }
 
+.contact {
+  font-size: 35px;
+  margin-bottom: -15px;
+}
+
 a {
   text-decoration: none;
 }
@@ -103,7 +112,7 @@ a {
 
 .links button {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* Estilos dos Botões */
@@ -200,7 +209,7 @@ a {
 
   .links button {
     padding: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
   }
 
   .link-btn {
