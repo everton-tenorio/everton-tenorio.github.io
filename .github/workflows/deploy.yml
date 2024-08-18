@@ -19,7 +19,7 @@ jobs:
 
       - name: profile directory
         working-directory: ./profile
-        run: cd profile
+        run: ls
 
       - name: Install dependencies
         run: npm install
