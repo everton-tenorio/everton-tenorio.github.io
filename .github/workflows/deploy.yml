@@ -17,10 +17,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        # working-directory: ./profile
+      - name: profile directory
+        working-directory: ./profile
         run: cd profile
+
+      - name: Install dependencies
         run: npm install
+
+      -name: build
         run: npm run build
 
       - name: Deploy to GitHub Pages
