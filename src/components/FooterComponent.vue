@@ -17,7 +17,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.visible = true;
-    }, 2000); 
+    }, 800); 
   },
 };
 </script>
@@ -41,15 +41,9 @@ export default {
   transform: translateY(0);
 }
 
-.content {
-  flex: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .footer p {
   margin: 0;
+  padding-bottom: 20px;
   color: white;
 }
 </style>
