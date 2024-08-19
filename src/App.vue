@@ -26,7 +26,7 @@
             </p>
             <p v-if="selectedLink === 'Portfólio'">
               Veja meu portfólio com projetos que destacam minhas habilidades e experiências em desenvolvimento.
-              <a href="https://sofutebol.live/"><p><img src="./sofutebol-live.png" width="50%"/></p></a>
+              <a href="https://sofutebol.live/"><p id="img-sft"><img src="./sofutebol-live.png" /></p></a>
             </p>
             <p v-if="selectedLink === 'dev.to'">
               Leia meus artigos técnicos no dev.to, onde compartilho insights sobre programação e tecnologia.
@@ -36,12 +36,12 @@
       </div>
     </transition>
 
-   <!--<FooterComponent />-->
+   <FooterComponent />
   </div>
 </template>
 
 <script>
-// import FooterComponent from './components/FooterComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 
 export default {
@@ -51,7 +51,7 @@ export default {
     }
   },
   components: {
-    // FooterComponent,
+    FooterComponent,
   },
   methods: {
     openModal(link) {
@@ -66,8 +66,9 @@ export default {
 
 <style>
 #app {
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 10px;
+  min-height: 85vh;
 }
 
 /* Perfil e Links em Layout Desktop */
@@ -96,8 +97,9 @@ export default {
 }
 
 .contact {
-  font-size: 35px;
-  margin-bottom: -15px;
+  font-size: 40px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 a {
@@ -111,7 +113,7 @@ a {
 }
 
 .links button {
-  padding: 15px;
+  padding: 25px;
   margin-bottom: 30px;
 }
 
@@ -195,20 +197,34 @@ a {
   color: #555;
 }
 
+#img-sft img {
+  width: 20%;
+}
+
 /* Responsividade para dispositivos móveis */
 @media screen and (max-width: 767px) {
+  #app {
+    margin-top: 15px;
+  }
+
   .profile-img {
-    width: 120px;
+    width: 110px;
+  }
+
+  .contact {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 5px;
   }
 
   .links {
     display: block;
     text-align: center;
-    padding: 30px;
+    padding: 25px;
   }
 
   .links button {
-    padding: 18px;
+    padding: 20px;
     margin-bottom: 35px;
   }
 
@@ -227,6 +243,10 @@ a {
 
   .modal-title {
     font-size: 1.2rem;
+  }
+
+  #img-sft img{
+    width: 45%;
   }
 }
 
