@@ -24,10 +24,13 @@
             <p v-if="selectedLink === 'GitHub'">
               Explore meus repositórios no GitHub, onde compartilho projetos de código aberto e colaborações.
             </p>
-            <p v-if="selectedLink === 'Portfólio'">
+            <div v-if="selectedLink === 'Portfólio'">
               Veja meu portfólio com projetos que destacam minhas habilidades e experiências em desenvolvimento.
-              <a href="https://sofutebol.live/"><p id="img-sft"><img src="./sofutebol-live.png" /></p></a>
-            </p>
+              <div class="projects">
+                <a href="https://sofutebol.live/"><p id="img-sft"><img src="./sofutebol-live.png" /></p></a>
+                <a href="https://github.com/everton-tenorio/concy"><p id="img-sft"><img src="./concy.png" /></p></a>
+              </div>
+            </div>
             <p v-if="selectedLink === 'dev.to'">
               Leia meus artigos técnicos no dev.to, onde compartilho insights sobre programação e tecnologia.
             </p>
@@ -197,8 +200,18 @@ a {
   color: #555;
 }
 
+.projects {
+  text-align:center;
+  margin: 10px 0px;
+  padding: 5px;
+}
+
+.projects p {
+  margin-bottom: 45px;
+}
+
 #img-sft img {
-  width: 20%;
+  width: 25%;
 }
 
 /* Responsividade para dispositivos móveis */
@@ -245,8 +258,12 @@ a {
     font-size: 1.2rem;
   }
 
+  .projects p {
+    margin-bottom: 25px;
+  }
+
   #img-sft img{
-    width: 45%;
+    width: 60%;
   }
 }
 
