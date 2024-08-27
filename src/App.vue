@@ -16,7 +16,7 @@
     </div>
 
     <transition name="fade">
-      <div v-if="selectedLink" class="modal-overlay">
+      <div v-if="selectedLink" class="modal-overlay" @click.self="closeModal">
         <div class="modal">
           <button @click="closeModal" class="close-button">&times;</button>
           <h2 class="modal-title">{{ selectedLink }}</h2>
