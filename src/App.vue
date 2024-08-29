@@ -28,7 +28,8 @@
               Veja meu portfólio com projetos que destacam minhas habilidades e experiências em desenvolvimento.
               <div class="projects">
                 <a href="https://sofutebol.live/"><p id="img-sft"><img src="./sofutebol-live.png" /></p></a>
-                <a href="https://github.com/everton-tenorio/concy"><p id="img-sft"><img src="./concy.png" /></p></a>
+                <a href="https://preco-fipe.vercel.app"><p><img src="./car.png" width="65px"/>preço-FIPE</p></a>
+                <a href="https://github.com/everton-tenorio/concy"><p id="img-sft"><img src="./concy.png" /></p></a>             
               </div>
             </div>
             <p v-if="selectedLink === 'dev.to'">
@@ -259,7 +260,8 @@ a {
   }
 
   .projects p {
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 35px;
   }
 
   #img-sft img{
