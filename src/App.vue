@@ -22,14 +22,19 @@
           <h2 class="modal-title">{{ selectedLink }}</h2>
           <div class="modal-content">
             <p v-if="selectedLink === 'GitHub'">
-              Explore meus repositórios no GitHub, onde compartilho projetos de código aberto e colaborações.
+              Github
             </p>
             <div v-if="selectedLink === 'Portfólio'">
-              Veja meu portfólio com projetos que destacam minhas habilidades e experiências em desenvolvimento.
               <div class="projects">
-                <a href="https://sofutebol.live/"><p id="img-sft"><img src="./sofutebol-live.png" /></p></a>
-                <a href="https://preco-fipe.vercel.app"><p><img src="./car.png" width="65px"/>preço-FIPE</p></a>
-                <a href="https://github.com/everton-tenorio/concy"><p id="img-sft"><img src="./concy.png" /></p></a>             
+                <a href="https://sofutebol.live/"><p id="img-sft">sofutebol<i class="fa-solid fa-bullseye"></i>live</p></a>
+                <a href="https://preco-fipe.vercel.app"><p><img src="./car.png" width="40px"/>preço-FIPE</p></a>
+                <a href="https://github.com/everton-tenorio/concy">
+                  <img src="./concy.png" width="40px"/>
+                  <p style="margin-top: -5px;"> 
+                    cty
+                    <br><sub style="color:gray; font-size:10px">Conventional Commits CLI</sub>
+                  </p>
+                </a>             
               </div>
             </div>
             <p v-if="selectedLink === 'dev.to'">
@@ -204,11 +209,20 @@ a {
 .projects {
   text-align:center;
   margin: 10px 0px;
-  padding: 5px;
+  padding: 25px 60px;
+}
+
+.projects a {
+  color: black;
+}
+
+.fa-bullseye {
+  color: red;
+  font-size: 6px;
 }
 
 .projects p {
-  margin-bottom: 45px;
+  font-size: 20px;
 }
 
 #img-sft img {
@@ -265,7 +279,7 @@ a {
   }
 
   #img-sft img{
-    width: 60%;
+    width: 20%;
   }
 }
 
