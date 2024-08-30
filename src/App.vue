@@ -5,7 +5,7 @@
       <h1>Everton Tenório</h1>
       <p class="contact">
         <a href="https://t.me/evertontenorio" target="_blank" class="telegram-icon">
-          <i class="fab fa-telegram-plane" style="color: black"></i>
+          <i class="fab fa-telegram-plane" style="color: white"></i>
         </a>
       </p>
     </div>
@@ -90,7 +90,7 @@ export default {
   font-family: 'Ubuntu', sans-serif;
   margin-top: 5px;
   font-size: 25px;
-  color: black;
+  color: white;
 }
 
 .profile p {
@@ -128,7 +128,7 @@ a {
 
 /* Estilos dos Botões */
 .link-btn {
-  background-color: #111;
+  background-color: #1f1e1e;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -137,15 +137,15 @@ a {
   font-size: 1.1rem;
   display: flex;
   align-items: center;
-  box-shadow: 3px 5px 1px red;
+  box-shadow: 1px 1.5px 1px #880505;
 }
 .link-btn i {
   margin-right: 10px;
 }
 .link-btn:hover {
-  color: red;
+  color: black;
   background-color: white;
-  box-shadow: 3px 5px 1px black;
+  box-shadow: 3px 5px 1px red;
 }
 
 /* Transição do Modal */
