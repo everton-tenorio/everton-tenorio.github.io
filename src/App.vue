@@ -28,8 +28,8 @@
               <div class="projects">
                 <a href="https://sofutebol.live/"><p id="img-sft">sofutebol<i class="fa-solid fa-bullseye"></i>live</p></a>
                 <a href="https://preco-fipe.vercel.app"><p><img src="./car.png" width="40px"/>preço-FIPE</p></a>
-                <a href="https://github.com/everton-tenorio/concy">
-                  <img src="./concy.png" width="40px"/>
+                <a href="https://github.com/everton-tenorio/cty">
+                  <img src="./cty.png" width="40px"/>
                   <p style="margin-top: -5px;"> 
                     cty
                     <br><sub style="color:gray; font-size:10px">Conventional Commits CLI</sub>
