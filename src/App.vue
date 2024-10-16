@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="profile">
-      <img src="https://avatars.githubusercontent.com/u/114461163?v=4" alt="Foto de Perfil" class="profile-img">
+      <div class="profile-img">
+        <img src="https://avatars.githubusercontent.com/u/114461163?v=4" alt="Foto de Perfil" class="evt-img">
+      </div>
       <h1>Everton Tenório</h1>
       <p class="contact">
         <a href="https://t.me/evertontenorio" target="_blank" class="telegram-icon">
@@ -11,7 +13,7 @@
     </div>
     <div class="links">
       <a href="https://github.com/everton-tenorio"><button class="link-btn"><i class="fa-brands fa-github"></i> GitHub</button></a>
-      <button @click="openModal('Portfólio')" class="link-btn"><i class="fa-solid fa-briefcase"></i> Portfólio</button>
+      <!--<button @click="openModal('Portfólio')" class="link-btn"><i class="fa-solid fa-briefcase"></i> Portfólio</button>-->
       <a href="https://dev.to/evertontenorio"><button class="link-btn"><i class="fa-brands fa-dev"></i> dev.to</button></a>
     </div>
 
@@ -24,7 +26,7 @@
             <p v-if="selectedLink === 'GitHub'">
               Github
             </p>
-            <div v-if="selectedLink === 'Portfólio'">
+            <!--<div v-if="selectedLink === 'Portfólio'">
               <div class="projects">
                 <a href="https://sofutebol.live/"><p id="img-sft">sofutebol<i class="fa-solid fa-bullseye"></i>live</p></a>
                 <a href="https://preco-fipe.vercel.app"><p><img src="./car.png" width="40px"/>preço-FIPE</p></a>
@@ -36,7 +38,7 @@
                   </p>
                 </a>             
               </div>
-            </div>
+            </div>-->
             <p v-if="selectedLink === 'dev.to'">
               Leia meus artigos técnicos no dev.to, onde compartilho insights sobre programação e tecnologia.
             </p>
@@ -44,13 +46,14 @@
         </div>
       </div>
     </transition>
-
-   <FooterComponent />
+    <EvttsComponent />
+   <!--<FooterComponent />-->
   </div>
 </template>
 
 <script>
-import FooterComponent from './components/FooterComponent.vue'
+import EvttsComponent from './components/EvttsComponent.vue'
+//import FooterComponent from './components/FooterComponent.vue'
 
 
 export default {
@@ -60,7 +63,8 @@ export default {
     }
   },
   components: {
-    FooterComponent,
+    EvttsComponent,
+    //FooterComponent,
   },
   methods: {
     openModal(link) {
@@ -88,8 +92,8 @@ export default {
 
 .profile h1 {
   font-family: 'Ubuntu', sans-serif;
-  margin-top: 5px;
-  font-size: 25px;
+  margin-top: 10px;
+  font-size: 20px;
   color: white;
 }
 
@@ -100,9 +104,20 @@ export default {
 }
 
 .profile-img {
+  margin: 0 auto;
   border-radius: 50%;
-  width: 150px;
-  border: 3px solid black;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(4deg, red, yellow, #e6530e, #ed232a, #ed232a, #db0909, red);
+  border: 2px solid transparent;
+  overflow: hidden; /* Esconde partes do pseudo-elemento que saem do círculo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar um efeito de destaque */
+}
+
+.evt-img {
+  border-radius: 50%;
+  border: 5px solid black;
+  width: 90px;
 }
 
 .contact {
@@ -229,14 +244,53 @@ a {
   width: 25%;
 }
 
+.email-btn {
+  margin-top: 15px;
+  margin-right:10px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  float: right;
+  border: 1px solid black;
+}
+
+.email-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.email-btn a {
+  color: white;
+}
+
+/* Remover o highlight que aparece ao clicar nos cards */
+.card, .email-btn {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card:focus, .card:active, .email-btn:focus, .email-btn:active {
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent; 
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Responsividade para dispositivos móveis */
 @media screen and (max-width: 767px) {
   #app {
-    margin-top: 15px;
-  }
-
-  .profile-img {
-    width: 110px;
+    margin-top: 5px;
   }
 
   .contact {
