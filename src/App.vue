@@ -152,7 +152,7 @@ a {
   font-size: 1.1rem;
   display: flex;
   align-items: center;
-  box-shadow: 1px 1.5px 1px #880505;
+  box-shadow: 2px 2px 1px #d81515;
 }
 .link-btn i {
   margin-right: 10px;
@@ -290,7 +290,7 @@ a {
 /* Responsividade para dispositivos móveis */
 @media screen and (max-width: 767px) {
   #app {
-    margin-top: 5px;
+    margin-top: 8px;
   }
 
   .contact {

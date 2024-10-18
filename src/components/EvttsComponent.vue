@@ -40,9 +40,10 @@
     data() {
       return {
         messages: [
-          { message_id: "#tecnologia #srn", text: "Linux, Vue.js, Python e Futebol. <br><button class='email-btn'><a href='https://t.me/evertontenorio' target='_blank'> <i class='fab fa-telegram-plane' style='color:white;'></i> Telegram</a></button> <a href='mailto:evttenorio@outlook.com?subject=Tecnologia'><button class='email-btn'><i class='fa fa-envelope'></i> email</button></a>" },
+          { message_id: "#tecnologia", text: "Utilizo técnicas de ciência de dados, desenvolvimento web, cloud e automação para resolver projetos pessoais e profissionais. <br><button class='email-btn' style='color:white;border-radius:50px;'><a href='https://t.me/evertontenorio' target='_blank'> <i class='fab fa-telegram-plane' style='font-size:27px'></i></a></button><a href='mailto:evttenorio@outlook.com?subject=Tecnologia'><button class='email-btn' style='border-radius:50px'><i class='fa fa-envelope' style='font-size:25px;'></i></button></a>" },
           { message_id: "#futebol", text: "Saiba onde assistir futebol ao vivo na TV e online. <br><br><br><a href='https://sofutebol.live/'><span style='float:right;border:1px solid black;padding: 5px;border-radius:5px;background:black; color:white' id='img-sft'>sofutebol<i style='color:red;font-size:20px;'>.</i>live</span><br></a>" },
-          { message_id: "#economia", text: "Consulte o preço médio dos veículos e a variação por ano com base na FIPE. <br><br><br><a href='https://preco-fipe.vercel.app'><span style='border:1px solid black;padding: 8px;border-radius:5px;background:black; color:white'>🏎️  https://preço-fipe.vercel.app/</span><br><br></a>" },
+          { message_id: "#economia", text: "Consulte o preço médio dos veículos e a variação por ano com base na FIPE. <br><br><br><a href='https://preco-fipe.vercel.app'><span style='border:1px solid black;padding: 8px;border-radius:5px;background:black; color:white'>🏎️  https://preco-fipe.vercel.app/</span><br><br></a>" },
+          { message_id: "", text: "O site <i>dev.to</i> é uma rede social para programadores, lá vejo técnicas de programação e hacking, sempre que possível compartilho algo de tecnologia também." },
         ],
       };
     },
@@ -56,7 +57,7 @@
   
 <style scoped>
 .slider-container {
-    margin: -20px -30px;
+    margin: -20px -50px;
     padding: 10px;
 }
 
