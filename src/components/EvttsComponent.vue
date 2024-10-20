@@ -57,8 +57,8 @@
   
 <style scoped>
 .slider-container {
-    margin: -20px -50px;
-    padding: 10px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 /* Estilo para o carrossel */

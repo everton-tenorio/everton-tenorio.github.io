@@ -47,12 +47,14 @@
       </div>
     </transition>
     <EvttsComponent />
+    <NewsComponent />
    <!--<FooterComponent />-->
   </div>
 </template>
 
 <script>
 import EvttsComponent from './components/EvttsComponent.vue'
+import NewsComponent from './components/NewsComponent.vue'
 //import FooterComponent from './components/FooterComponent.vue'
 
 
@@ -64,6 +66,7 @@ export default {
   },
   components: {
     EvttsComponent,
+    NewsComponent,
     //FooterComponent,
   },
   methods: {
@@ -209,12 +212,12 @@ a {
 .close-button {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 4rem;
-  color: white;
+  font-size: 3rem;
+  color: #c0c0c0;
 }
 
 .close-button:hover {
