@@ -89,7 +89,7 @@
           <div v-if="selectedNews === 'arstech'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}Guia sobre o Drex: o que é e como funciona o Real Digital</h3>
+              <h3 class="modal-title">{{ selectedNews.title }}Cheap AI “video scraping” can now extract data from any screen recording</h3>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> Resumo gerado por I.A</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
