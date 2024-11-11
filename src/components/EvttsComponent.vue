@@ -40,17 +40,17 @@
     data() {
       return {
         messages: [
-          { message_id: "#tech", text: "" },
-          { message_id: "#goal", text: "" },
-          { message_id: "", text: "" },
-          { message_id: "", text: "" },
+          { message_id: "#tech", text: "." },
+          { message_id: "#goal", text: "." },
+          { message_id: "", text: "." },
+          { message_id: "", text: "." },
         ],
       };
     },
     watch: {
       // Observe mudanças no idioma
       '$i18n.locale': function() {
-        this.updateMessages(); // Atualiza as mensagens quando o idioma mudar
+        this.updateMessages();
       }
     },
     mounted() {
