@@ -5,10 +5,19 @@
         <img src="https://avatars.githubusercontent.com/u/114461163?v=4" alt="Foto de Perfil" class="evt-img">
       </div>
       <h1>Everton Tenório</h1>
+
       <p class="contact">
-        <a href="https://t.me/evertontenorio" target="_blank" class="telegram-icon">
+        <!-- Botão de escolha de idioma -->
+        <label class="language-switcher">
+          <input type="checkbox" v-model="isEnglish" @change="toggleLanguage">
+          <span class="slider round"></span>
+          <span class="select-ptbr"><img src="https://cdn-icons-png.flaticon.com/512/555/555417.png" width="20px" height="20px"/></span>
+          <span class="select-en"><img src="https://cdn-icons-png.flaticon.com/128/630/630591.png" width="21px" height="21px"/></span>
+        </label>
+
+        <!--<a href="https://t.me/evertontenorio" target="_blank" class="telegram-icon">
           <i class="fab fa-telegram-plane" style="color: white"></i>
-        </a>
+        </a>-->
       </p>
     </div>
     <div class="links">
@@ -69,12 +78,23 @@ export default {
     NewsComponent,
     //FooterComponent,
   },
+  computed: {
+    // Obter o idioma atual diretamente do i18n
+    currentLanguage() {
+      return this.$i18n.locale;
+    }
+  },
   methods: {
     openModal(link) {
       this.selectedLink = link;
     },
     closeModal() {
       this.selectedLink = null;
+    },
+    toggleLanguage() {
+      const newLanguage = this.currentLanguage === 'en' ? 'pt' : 'en';
+      this.$i18n.locale = newLanguage;
+      localStorage.setItem('language', newLanguage);
     }
   }
 }
@@ -340,4 +360,62 @@ a {
   }
 }
 
+
+.language-switcher {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  transform: translateY(10%);
+}
+
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.select-ptbr, .select-en {
+  position: absolute;
+  font-size: 14px;
+  top: 10px;
+  color: #fff;
+}
+
+.select-ptbr {
+  left: 10px;
+}
+
+.select-en {
+  right: 10px;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1f1e1e;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 36px;
+  width: 36px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(40px);
+}
 </style>

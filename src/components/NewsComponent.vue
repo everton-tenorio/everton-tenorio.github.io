@@ -1,8 +1,8 @@
 <template>
     <div class="news">
-      <div class="seila">
+      <div class="cards-container">
         <h2>News<span> gmn</span></h2>
-        <p style="font-size: 12px; margin-top:-20px; color:gray">Resumo de notícias utilizando Inteligência Artifical</p>
+        <p style="font-size: 12px; margin-top:-20px; color:gray">{{ $t('newssummary') }}</p>
   
         <div class="all-cards">
           <div
@@ -18,7 +18,7 @@
 
           <div class="card-news" @click="openModal('verge')">
             <img class="img-news" src="https://cdn.vox-cdn.com/thumbor/r0zpb7jtV22KFWAHGD1q68jSqWk=/95x194:1946x1166/fit-in/1851x972/cdn.vox-cdn.com/uploads/chorus_asset/file/25681754/2004_CHORUS_LEDE2.jpg" alt="News image">
-            <h4>2004 was the first year of the future</h4>
+            <h4>{{ $t('verge') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
           </div>
           
@@ -26,7 +26,7 @@
           <div class="card-news">
             <a href="https://sofutebol.live" style="color:black">
                 <img class="img-news" src="../assets/sofutebol.png" alt="News image">
-                <h4>Futebol: a programação completa dos jogos de hoje | sofutebol.live</h4>
+                <h4>{{ $t('sofutebol') }}</h4>
                 <i id="external-link" class="fa fa-external-link"></i>
             </a>
           </div>
@@ -34,13 +34,13 @@
 
         <div class="card-news" @click="openModal('infomoney')">
             <img class="img-news" src="https://www.infomoney.com.br/wp-content/uploads/2021/11/economia_1609210416_0.jpg?quality=70" alt="News image">
-            <h4>Guia sobre o Drex: o que é e como funciona o Real Digital</h4>
+            <h4>{{ $t('drex') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
 
         <div class="card-news" @click="openModal('arstech')">
             <img class="img-news" src="https://cdn.arstechnica.net/wp-content/uploads/2024/10/abstract_cubes.jpg" alt="News image">
-            <h4>Cheap AI “video scraping” can now extract data from any screen recording</h4>
+            <h4>{{ $t('arstech') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
   
@@ -48,14 +48,14 @@
           <div v-if="selectedNews === 'verge'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}2004 was the first year of the future</h3>
+              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('verge') }}</h3>
               <div class="modal-content">
-                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> Resumo gerado por I.A</span>
+                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    Em 2004, o mundo digital que conhecemos hoje nasceu. Grandes inovações como Facebook, Gmail, Firefox e Flickr foram lançadas, e o Google abriu seu capital, consolidando seu domínio. A Web 2.0 começou a reformular a internet, com termos como "blog" e "cauda longa" ganhando destaque. Enquanto sequências de filmes dominavam os cinemas e a Apple apresentava novos dispositivos, 2004 se tornou um ano decisivo para a tecnologia, moldando a forma como nos conectamos e interagimos online hoje.
+                    {{ $t('vergenews') }}
                 </p>
                 <p style="font-size: 10px">
-                  Ler notícia completa: 
+                  {{ $t('leia') }}: 
                   <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
                   <a href="https://www.theverge.com/c/24247055/2004-tech-internet-gadgets-phones-pop-culture">https://www.theverge.com/c/24247055/2004-tech-internet-gadgets-phones-pop-culture</a>
                 </p>
@@ -68,14 +68,14 @@
           <div v-if="selectedNews === 'infomoney'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}Guia sobre o Drex: o que é e como funciona o Real Digital</h3>
+              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('drex') }}</h3>
               <div class="modal-content">
-                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> Resumo gerado por I.A</span>
+                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    O Drex é a moeda digital oficial do Brasil, lançada pelo Banco Central (BC), com o objetivo de modernizar as transações financeiras e aumentar a inclusão no mercado financeiro. Ela será uma extensão do real físico, permitindo transferências e pagamentos de maneira digital. Entre as principais vantagens, estão a redução de custos, maior segurança jurídica e privacidade, e a possibilidade de realizar transações 24/7. O Drex também permitirá o uso de contratos inteligentes, promovendo inovação no mercado financeiro e criando novas oportunidades de investimento e crédito.
+                    {{ $t('drexnews') }}
                 </p>
                 <p style="font-size: 10px">
-                  Ler notícia completa: 
+                  {{ $t('leia') }}: 
                   <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
                   <a href="https://www.infomoney.com.br/guias/drex-real-digital/">
                     https://www.infomoney.com.br/guias/drex-real-digital/</a>
@@ -89,13 +89,13 @@
           <div v-if="selectedNews === 'arstech'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}Cheap AI “video scraping” can now extract data from any screen recording</h3>
+              <h3 class="modal-title">{{ selectedNews.title }} {{ $t('arstech') }}</h3>
               <div class="modal-content">
-                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> Resumo gerado por I.A</span>
+                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    Recentemente, o pesquisador de IA Simon Willison precisava somar os valores de cobranças de um serviço em nuvem, mas as informações estavam espalhadas em vários e-mails. Para evitar o trabalho manual, ele usou uma técnica chamada "video scraping", que consiste em alimentar uma gravação de tela em um modelo de IA para extração de dados. Ele utilizou o Google AI Studio, com o modelo Gemini 1.5 Flash, para extrair dados de um vídeo de 35 segundos. A IA converteu os dados em JSON, incluindo datas e valores monetários, e Willison os formatou em uma tabela CSV. O processo custou menos de um décimo de centavo, uma surpresa para Willison, que percebeu o potencial de modelos multimodais (áudio, vídeo, imagem e texto) para interagir com dados visuais. Ele vê o "video scraping" como uma forma de contornar barreiras de extração de dados em certos formatos e acredita que essa técnica terá um uso crescente, destacando tanto os benefícios quanto as possíveis preocupações com privacidade.                </p>
+                    {{ $t('arstechnews') }}                </p>
                 <p style="font-size: 10px">
-                  Ler notícia completa: 
+                  {{ $t('leia') }}: 
                   <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
                   <a href="https://arstechnica.com/ai/2024/10/cheap-ai-video-scraping-can-now-extract-data-from-any-screen-recording/">
                     https://arstechnica.com/ai/2024/10/cheap-ai-video-scraping-can-now-extract-data-from-any-screen-recording/</a>
@@ -155,23 +155,25 @@
       background: #232323;
   }
   
-  .seila {
+  .cards-container {
       padding: 5px 30px;
   }
   
-  .seila h2 {
+  .cards-container h2 {
       font-size: 40px;
       font-family: 'Times New Roman', Times, serif;
       color: white;
   }
   
-  .seila span {
+  .cards-container span {
       font-family: 'Segoe UI', Ubuntu, 'Open Sans', sans-serif;
       font-size: 25px;
       font-style: italic;
       color: #c1c1c1;
       margin-left: -5px;
   }
+
+  .all-cards {margin-top: 50px;}
   
   .img-news {
       border-radius: 100%;
