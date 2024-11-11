@@ -53,9 +53,6 @@
         this.updateMessages();
       }
     },
-    mounted() {
-      this.updateMessages();
-    },
     methods: {
         enviarEmail() {
             window.location = 'mailto:evttenorio@outlook.com?subject=Tecnologia', true;
@@ -68,6 +65,9 @@
             this.messages[3].text = this.$t('devto');
 
         }
+    },
+    mounted() {
+      this.updateMessages();
     }
   };
   </script>
