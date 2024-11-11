@@ -40,7 +40,7 @@
     data() {
       return {
         messages: [
-          { message_id: "#tech", text: this.$t('aboutme') },
+          { message_id: "#tech", text: this.$t('aboutme', { email: 'evttenorio@outlook.com' }) },
           { message_id: "#goal", text: this.$t('sofutebas') },
           { message_id: "", text: this.$t('precofipe') },
           { message_id: "", text: this.$t('devto') },
@@ -59,7 +59,7 @@
         },
         updateMessages() {
             // Atualiza as traduções das mensagens
-            this.messages[0].text = this.$t('aboutme');
+            this.messages[0].text = this.$t('aboutme', { email: 'evttenorio@outlook.com' });
             this.messages[1].text = this.$t('sofutebas');
             this.messages[2].text = this.$t('precofipe');
             this.messages[3].text = this.$t('devto');
