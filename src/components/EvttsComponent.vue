@@ -40,10 +40,10 @@
     data() {
       return {
         messages: [
-          { message_id: "#tech", text: "." },
-          { message_id: "#goal", text: "." },
-          { message_id: "", text: "." },
-          { message_id: "", text: "." },
+          { message_id: "#tech", text: this.$t('aboutme') },
+          { message_id: "#goal", text: this.$t('sofutebas') },
+          { message_id: "", text: this.$t('precofipe') },
+          { message_id: "", text: this.$t('devto') },
         ],
       };
     },
