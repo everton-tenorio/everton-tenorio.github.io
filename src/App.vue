@@ -103,7 +103,7 @@ export default {
 <style>
 #app {
   margin-top: 30px;
-  padding: 10px;
+  padding: 5px 150px 5px 150px;
   min-height: 85vh;
 }
 
@@ -154,13 +154,14 @@ a {
 }
 
 .links {
-  display: flex;
+  display: grid;
   justify-content: space-around;
-  padding: 10px;
+  padding: 20px;
 }
 
 .links button {
-  padding: 25px;
+  width: 100%;
+  padding: 25px 200px;
   margin-bottom: 30px;
 }
 
@@ -313,6 +314,7 @@ a {
 /* Responsividade para dispositivos móveis */
 @media screen and (max-width: 767px) {
   #app {
+    padding: 10px;
     margin-top: 8px;
   }
 
@@ -325,7 +327,7 @@ a {
   .links {
     display: block;
     text-align: center;
-    padding: 25px;
+    padding: 25px 5px;
   }
 
   .links button {
