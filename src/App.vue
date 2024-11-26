@@ -21,9 +21,9 @@
       </p>
     </div>
     <div class="links">
-      <a href="https://github.com/everton-tenorio"><button class="link-btn"><i class="fa-brands fa-github"></i> GitHub</button></a>
+      <a href="https://github.com/everton-tenorio"><button class="link-btn"><i id="iconaw" class="fa-brands fa-github"></i> GitHub</button></a>
       <!--<button @click="openModal('Portfólio')" class="link-btn"><i class="fa-solid fa-briefcase"></i> Portfólio</button>-->
-      <a href="https://dev.to/evertontenorio"><button class="link-btn"><i class="fa-brands fa-dev"></i> dev.to</button></a>
+      <a href="https://dev.to/evertontenorio"><button class="link-btn"><i id="iconaw" class="fa-brands fa-dev"></i> Tech Posts: Python, Data Extraction, Finance, etc.</button></a>
     </div>
 
     <transition name="fade">
@@ -110,12 +110,13 @@ export default {
 /* Perfil e Links em Layout Desktop */
 .profile {
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 .profile h1 {
   font-family: 'Ubuntu', sans-serif;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 20px;
   color: white;
 }
@@ -173,8 +174,9 @@ a {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 15px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: flex;
+  text-align: center;
   align-items: center;
   box-shadow: 2px 2px 1px #d81515;
 }
@@ -185,6 +187,9 @@ a {
   color: black;
   background-color: white;
   box-shadow: 3px 5px 1px red;
+}
+#iconaw {
+  font-size: 30px;
 }
 
 /* Transição do Modal */
