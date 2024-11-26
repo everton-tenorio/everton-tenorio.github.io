@@ -23,7 +23,7 @@
     <div class="links">
       <a href="https://github.com/everton-tenorio"><button class="link-btn"><i id="iconaw" class="fa-brands fa-github"></i> GitHub</button></a>
       <!--<button @click="openModal('Portfólio')" class="link-btn"><i class="fa-solid fa-briefcase"></i> Portfólio</button>-->
-      <a href="https://dev.to/evertontenorio"><button class="link-btn"><i id="iconaw" class="fa-brands fa-dev"></i> Tech Posts: Python, Data Extraction, Finance, etc.</button></a>
+      <a href="https://dev.to/evertontenorio"><button class="link-btn"><i id="iconaw" class="fa-brands fa-dev"></i> {{ $t('devto_me') }}</button></a>
     </div>
 
     <transition name="fade">
