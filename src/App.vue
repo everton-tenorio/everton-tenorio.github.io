@@ -21,9 +21,9 @@
       </p>
     </div>
     <div class="links">
-      <a href="https://github.com/everton-tenorio"><button class="link-btn"><i id="iconaw" class="fa-brands fa-github"></i> GitHub</button></a>
-      <!--<button @click="openModal('Portfólio')" class="link-btn"><i class="fa-solid fa-briefcase"></i> Portfólio</button>-->
-      <a href="https://dev.to/evertontenorio"><button class="link-btn"><i id="iconaw" class="fa-brands fa-dev"></i> {{ $t('devto_me') }}</button></a>
+      <a href="https://github.com/everton-tenorio"><button class="link-btn"><i id="iconw" class="fa-brands fa-github"></i></button></a>
+      <a href="https://t.me/evertontenorio"><button class="link-btn"><i id="iconw" class="fab fa-telegram-plane"></i></button></a>
+      <button @click="openModal(' ')" class="link-btn"><i id="iconw" class="fa-solid fa-briefcase"></i></button>
     </div>
 
     <transition name="fade">
@@ -32,39 +32,34 @@
           <button @click="closeModal" class="close-button">&times;</button>
           <h2 class="modal-title">{{ selectedLink }}</h2>
           <div class="modal-content">
-            <p v-if="selectedLink === 'GitHub'">
+            <!--<p v-if="selectedLink === 'GitHub'">
               Github
-            </p>
-            <!--<div v-if="selectedLink === 'Portfólio'">
+            </p>-->
+            <div v-if="selectedLink === ' '">
               <div class="projects">
                 <a href="https://sofutebol.live/"><p id="img-sft">sofutebol<i class="fa-solid fa-bullseye"></i>live</p></a>
-                <a href="https://preco-fipe.vercel.app"><p><img src="./car.png" width="40px"/>preço-FIPE</p></a>
-                <a href="https://github.com/everton-tenorio/cty">
-                  <img src="./cty.png" width="40px"/>
-                  <p style="margin-top: -5px;"> 
-                    cty
-                    <br><sub style="color:gray; font-size:10px">Conventional Commits CLI</sub>
-                  </p>
-                </a>             
+                <a href="https://preco-fipe.vercel.app"><p><img style="border-radius: 55px; border: 2px solid #2089d4" src="./car.png" width="40px"/>preço-FIPE</p></a>            
               </div>
-            </div>-->
-            <p v-if="selectedLink === 'dev.to'">
+            </div>
+            <!--<p v-if="selectedLink === 'dev.to'">
               Leia meus artigos técnicos no dev.to, onde compartilho insights sobre programação e tecnologia.
-            </p>
+            </p>-->
           </div>
         </div>
       </div>
     </transition>
-    <EvttsComponent />
+    <DevtoComponent />
     <NewsComponent />
-   <!--<FooterComponent />-->
+    <!--<EvttsComponent />-->
+    <!--<FooterComponent />-->
   </div>
 </template>
 
 <script>
-import EvttsComponent from './components/EvttsComponent.vue'
+import DevtoComponent from './components/DevtoComponent.vue'
 import NewsComponent from './components/NewsComponent.vue'
-//import FooterComponent from './components/FooterComponent.vue'
+// import EvttsComponent from './components/EvttsComponent.vue'
+// import FooterComponent from './components/FooterComponent.vue'
 
 
 export default {
@@ -74,9 +69,10 @@ export default {
     }
   },
   components: {
-    EvttsComponent,
+    DevtoComponent,
     NewsComponent,
-    //FooterComponent,
+    // EvttsComponent,
+    // FooterComponent,
   },
   computed: {
     // Obter o idioma atual diretamente do i18n
@@ -132,7 +128,8 @@ export default {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background: linear-gradient(4deg, red, yellow, #e6530e, #ed232a, #ed232a, #db0909, red);
+  background-color: #2dbd2d;
+  /* background: linear-gradient(4deg, red, yellow, #e6530e, #ed232a, #ed232a, #db0909, red); */
   border: 2px solid transparent;
   overflow: hidden; /* Esconde partes do pseudo-elemento que saem do círculo */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar um efeito de destaque */
@@ -155,15 +152,13 @@ a {
 }
 
 .links {
-  display: grid;
+  display: flex;
   justify-content: space-around;
-  padding: 20px;
-}
-
-.links button {
-  width: 100%;
-  padding: 25px 200px;
-  margin-bottom: 30px;
+  padding: 30px;
+  margin-bottom: 50px;
+  border: 0.8px dotted #e8dfdf2b;
+  border-radius: 20px;
+  border-width: 2px;
 }
 
 /* Estilos dos Botões */
@@ -171,25 +166,28 @@ a {
   background-color: #1f1e1e;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 10%;
   font-size: 1rem;
-  display: flex;
   text-align: center;
   align-items: center;
-  box-shadow: 2px 2px 1px #d81515;
+  box-shadow: 1px 0.6px 0.6px 0.5px #ec0909dd;
 }
-.link-btn i {
-  margin-right: 10px;
+
+.links button {
+    padding: 10px;
+    margin-bottom: 10px;
 }
+
 .link-btn:hover {
   color: black;
   background-color: white;
   box-shadow: 3px 5px 1px red;
 }
-#iconaw {
-  font-size: 30px;
+
+#iconw {
+  font-size: 25px;
 }
 
 /* Transição do Modal */
@@ -207,14 +205,14 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
 .modal {
-  background-color: white;
+  background-color: #000000d7;
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -228,11 +226,11 @@ a {
 .modal-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: black;
+  color: white;
 }
 
 .modal-content {
-  color: black;
+  color: white;
 }
 
 .close-button {
@@ -257,7 +255,7 @@ a {
 }
 
 .projects a {
-  color: black;
+  color: white;
 }
 
 .fa-bullseye {
@@ -330,21 +328,14 @@ a {
   }
 
   .links {
-    display: block;
+    display: flex;
     text-align: center;
-    padding: 25px 5px;
+    padding: 25px;
+    margin-bottom: 45px;
   }
 
   .links button {
-    padding: 20px;
-    margin-bottom: 35px;
-  }
-
-  .link-btn {
-    margin-bottom: 10px;
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px;
+    padding: 15px;
   }
 
   .modal {
