@@ -106,7 +106,7 @@ export default {
 /* Perfil e Links em Layout Desktop */
 .profile {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 25px;
 }
 
@@ -331,7 +331,7 @@ a {
     display: flex;
     text-align: center;
     padding: 25px;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
 
   .links button {
