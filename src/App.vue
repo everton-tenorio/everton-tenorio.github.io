@@ -128,7 +128,8 @@ export default {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background-color: #2dbd2d;
+  background-color: black;
+  /*background-color: #2dbd2d;*/
   /* background: linear-gradient(4deg, red, yellow, #e6530e, #ed232a, #ed232a, #db0909, red); */
   border: 2px solid transparent;
   overflow: hidden; /* Esconde partes do pseudo-elemento que saem do círculo */
