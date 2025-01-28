@@ -187,7 +187,7 @@
   margin-bottom: 35px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   padding: 5px 10px 2px 10px;
   width: auto;
   height: 100px;
