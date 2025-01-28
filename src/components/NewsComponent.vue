@@ -43,6 +43,12 @@
             <h4>{{ $t('mastodon_title.post3') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
+
+        <div class="card-news" @click="openModal('post4')">
+            <img class="img-news" :src="$t('mastodon_img.post4', '')" alt="News image">
+            <h4>{{ $t('mastodon_title.post4') }}</h4>
+            <i id="external-link" class="fa fa-external-link"></i>
+        </div>
   
         <transition name="fade">
           <div v-if="selectedNews === 'post1'" class="modal-overlay" @click.self="closeModal">
@@ -92,6 +98,24 @@
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
                     {{ $t('mastodon_toot.post3') }}
+                </p> 
+              </div>
+            </div>
+          </div>
+        </transition>
+
+        <transition>
+          <div v-if="selectedNews === 'post4'" class="modal-overlay" @click.self="closeModal">
+            <div class="modal">
+              <button @click="closeModal" class="close-button">&times;</button>
+              <div class="modal-header"
+              :style="{ backgroundImage: 'url(' + $t('mastodon_img.post4', '') + ')'}">
+                <h3 id="modal-title">{{ selectedNews.title }}{{ $t('mastodon_title.post4') }}</h3>
+              </div>
+              <div class="modal-content">
+                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
+                <p style="font-size: 14px">{{ selectedNews.summary }} 
+                    {{ $t('mastodon_toot.post4') }}
                 </p> 
               </div>
             </div>
@@ -243,7 +267,7 @@
 } 
   
 #modal-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: white;
   margin: 0;
   text-align: left;
