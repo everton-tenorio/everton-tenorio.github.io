@@ -17,7 +17,7 @@
           </div>
 
           <div class="card-news" @click="openModal('post1')">
-            <img class="img-news" src="https://downloadr2.apkmirror.com/wp-content/uploads/2025/01/99/678773c147230_com.deepseek.chat.png" alt="News image">
+            <img class="img-news" :src="$t('mastodon_img.post1', '')" alt="News image">
             <h4>{{ $t('mastodon_title.post1') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
           </div>
@@ -33,13 +33,13 @@
         </div>
 
         <div class="card-news" @click="openModal('post2')">
-            <img class="img-news" src="https://www.infomoney.com.br/wp-content/uploads/2021/11/economia_1609210416_0.jpg?quality=70" alt="News image">
+            <img class="img-news" :src="$t('mastodon_img.post2', '')" alt="News image">
             <h4>{{ $t('mastodon_title.post2') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
 
         <div class="card-news" @click="openModal('post3')">
-            <img class="img-news" src="https://cdn.arstechnica.net/wp-content/uploads/2024/10/abstract_cubes.jpg" alt="News image">
+            <img class="img-news" :src="$t('mastodon_img.post3', '')" alt="News image">
             <h4>{{ $t('mastodon_title.post3') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
@@ -48,7 +48,10 @@
           <div v-if="selectedNews === 'post1'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('mastodon_title.post1') }}</h3>
+              <div class="modal-header"
+              :style="{ backgroundImage: 'url(' + $t('mastodon_img.post1', '') + ')'}">
+                <h3 id="modal-title">{{ selectedNews.title }}{{ $t('mastodon_title.post1') }}</h3>
+              </div>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
@@ -63,7 +66,10 @@
           <div v-if="selectedNews === 'post2'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('mastodon_title.post2') }}</h3>
+              <div class="modal-header"
+              :style="{ backgroundImage: 'url(' + $t('mastodon_img.post2', '') + ')'}">
+                <h3 id="modal-title">{{ selectedNews.title }}{{ $t('mastodon_title.post2') }}</h3>
+              </div>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
@@ -78,11 +84,15 @@
           <div v-if="selectedNews === 'post3'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }} {{ $t('mastodon_title.post3') }}</h3>
+              <div class="modal-header"
+              :style="{ backgroundImage: 'url(' + $t('mastodon_img.post3', '') + ')'}">
+                <h3 id="modal-title">{{ selectedNews.title }}{{ $t('mastodon_title.post3') }}</h3>
+              </div>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    {{ $t('mastodon_toot.post3') }}                </p> 
+                    {{ $t('mastodon_toot.post3') }}
+                </p> 
               </div>
             </div>
           </div>
@@ -129,116 +139,143 @@
   }
   </script>
   
-  <style>
-  .news {
-      margin-top: 40px;
-      margin-left: -20px;
-      margin-right: -20px;
-      border-radius: 35px;
-      background: #232323;
+<style>
+.news {
+  margin-top: 40px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-radius: 35px;
+  background: #232323;
   }
   
-  .cards-container {
-      padding: 5px 30px;
-  }
+.cards-container {
+  padding: 5px 30px;
+}
   
-  .cards-container h2 {
-      font-size: 40px;
-      font-family: 'Times New Roman', Times, serif;
-      color: white;
-  }
+.cards-container h2 {
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
   
-  .cards-container span {
-      font-family: 'Segoe UI', Ubuntu, 'Open Sans', sans-serif;
-      font-size: 25px;
-      font-style: italic;
-      color: #c1c1c1;
-      margin-left: -5px;
-  }
+.cards-container span {
+  font-family: 'Segoe UI', Ubuntu, 'Open Sans', sans-serif;
+  font-size: 25px;
+  font-style: italic;
+  color: #c1c1c1;
+  margin-left: -5px;
+}
 
-  .all-cards {margin-top: 50px;}
+.all-cards {margin-top: 50px;}
   
-  .img-news {
-      border-radius: 100%;
-      width: 50px;
-      height: 50%;
-      margin-top: -30px;
-      display: flex;
-      border: 1px solid black;
-      float: right
-  }
+.img-news {
+  border-radius: 100%;
+  width: 50px;
+  height: 50%;
+  margin-top: -30px;
+  display: flex;
+  border: 1px solid black;
+  float: right
+}
   
   /* Estilos dos cards */
-  .card-news {
-    background-color: white;
-    color: black;
-    border: none;
-    margin-top: 30px;
-    margin-bottom: 35px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    padding: 10px;
-    width: auto;
-    height: 100px;
-    align-items: center;
-    box-shadow: 2px 2px 1px #d81515;
-  }
+.card-news {
+  background-color: white;
+  color: black;
+  border: none;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 5px 10px 2px 10px;
+  width: auto;
+  height: 100px;
+  align-items: center;
+  box-shadow: 2px 2px 1px #d81515;
+}
   
-  /* Transição do Modal */
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 0.5s;
-  }
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }
+/* Transição do Modal */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
   
-  /* Estilos do Modal */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* Estilos do Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
-  .modal {
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-width: 90%;
-    max-height: 80%;
-    overflow-y: auto;
-    text-align: left;
-  }
+.modal {
+  font-family: 'Times New Roman', Times, serif; 
+  margin: 20px;
+  padding: 20px;
+  border-radius: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 50%;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.modal-header {
+  position: relative;
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  padding: 0px 0px 10px 0px; /* Espaçamento interno */
+  box-shadow: inset 100px 100px 100px 100px #000000b5;  /* Sombra escura para leitura */
+  height: auto; /* Ajusta a altura ao conteúdo (ou você pode definir fixa, ex.: 200px) */ 
+  object-fit: cover;
+  margin-top: -20px;
+  margin-right: -20px;
+  margin-left: -20px;
+  margin-bottom: 15px;
+} 
   
-  .modal-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .modal-content {
-    color: black;
-  }
+#modal-title {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  text-align: left;
+  padding: 20px 0px 5px 15px;
+  z-index: 2;
+}
+
+.modal-content p{
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: 0.5px solid #ffffff34;
+  outline-offset: 10px;  
+  color: white; 
+  padding: 15px 5px 15px 5px;
+  text-align: left;
+}
 
 #external-link {
-    margin-top: -25px;
-    float: right;
-    font-size: 10px;
-    color: #2f2f2f;
+  margin: 0px;
+  float: right;
+  font-size: 10px;
+  color: #304978;
 }
 
 #badge-ia {
-    background: black;
-    color: white;
-    border-radius: 10px;
-    font-size: 11px;
-    padding: 5px;
+  margin-bottom: 100px;
+  background: #1b1b1b;
+  color: white;
+  border-radius: 10px;
+  font-size: 11px;
+  border: 0.5px solid red;
+  padding: 5px;
 }
 </style>

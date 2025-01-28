@@ -10,6 +10,7 @@ const messages = {
     badgeia: 'AI-generated summary',
     mastodon_title: {},
     mastodon_toot: {},
+    mastodon_img: {},
     sofutebol: 'Football/Soccer: the complete schedule of today’s games | sofutebol.live',    
   },
   pt: {
@@ -17,6 +18,7 @@ const messages = {
     badgeia: 'Resumo gerado por I.A.',
     mastodon_title: {},
     mastodon_toot: {},
+    mastodon_img: {},
     sofutebol: 'Futebol: a programação completa dos jogos de hoje | sofutebol.live',  
   }
 }
@@ -38,6 +40,8 @@ async function fetchMastodonPosts(i18n) {
 
     posts.forEach((post, index) => {
       const content = post.content;
+      const image = post.media_attachments?.[0]?.url || "https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg";
+      console.log(image)
 
       // Capturar e remover o título do conteúdo
       let titleEn = '';
@@ -73,6 +77,10 @@ async function fetchMastodonPosts(i18n) {
           mastodon_toot: {
             ...i18n.global.getLocaleMessage('en').mastodon_toot,
             [`post${index + 1}`]: enText.replace('&#39;', "'")
+          },
+          mastodon_img: {
+            ...i18n.global.getLocaleMessage('en').mastodon_img,
+            [`post${index + 1}`]: image // Armazena cada imagem em um índice correspondente.
           }
         });
 
