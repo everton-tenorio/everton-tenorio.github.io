@@ -16,9 +16,9 @@
             <i id="external-link" class="fa fa-external-link"></i>
           </div>
 
-          <div class="card-news" @click="openModal('verge')">
-            <img class="img-news" src="https://cdn.vox-cdn.com/thumbor/r0zpb7jtV22KFWAHGD1q68jSqWk=/95x194:1946x1166/fit-in/1851x972/cdn.vox-cdn.com/uploads/chorus_asset/file/25681754/2004_CHORUS_LEDE2.jpg" alt="News image">
-            <h4>{{ $t('verge') }}</h4>
+          <div class="card-news" @click="openModal('post1')">
+            <img class="img-news" src="https://downloadr2.apkmirror.com/wp-content/uploads/2025/01/99/678773c147230_com.deepseek.chat.png" alt="News image">
+            <h4>{{ $t('mastodon_title.post1') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
           </div>
           
@@ -32,32 +32,27 @@
           </div>
         </div>
 
-        <div class="card-news" @click="openModal('infomoney')">
+        <div class="card-news" @click="openModal('post2')">
             <img class="img-news" src="https://www.infomoney.com.br/wp-content/uploads/2021/11/economia_1609210416_0.jpg?quality=70" alt="News image">
-            <h4>{{ $t('drex') }}</h4>
+            <h4>{{ $t('mastodon_title.post2') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
 
-        <div class="card-news" @click="openModal('arstech')">
+        <div class="card-news" @click="openModal('post3')">
             <img class="img-news" src="https://cdn.arstechnica.net/wp-content/uploads/2024/10/abstract_cubes.jpg" alt="News image">
-            <h4>{{ $t('arstech') }}</h4>
+            <h4>{{ $t('mastodon_title.post3') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
   
         <transition name="fade">
-          <div v-if="selectedNews === 'verge'" class="modal-overlay" @click.self="closeModal">
+          <div v-if="selectedNews === 'post1'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('verge') }}</h3>
+              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('mastodon_title.post1') }}</h3>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    {{ $t('vergenews') }}
-                </p>
-                <p style="font-size: 10px">
-                  {{ $t('leia') }}: 
-                  <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
-                  <a href="https://www.theverge.com/c/24247055/2004-tech-internet-gadgets-phones-pop-culture">https://www.theverge.com/c/24247055/2004-tech-internet-gadgets-phones-pop-culture</a>
+                    {{ $t('mastodon_toot.post1', '') }}
                 </p>
               </div>
             </div>
@@ -65,20 +60,14 @@
         </transition>
 
         <transition>
-          <div v-if="selectedNews === 'infomoney'" class="modal-overlay" @click.self="closeModal">
+          <div v-if="selectedNews === 'post2'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('drex') }}</h3>
+              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('mastodon_title.post2') }}</h3>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    {{ $t('drexnews') }}
-                </p>
-                <p style="font-size: 10px">
-                  {{ $t('leia') }}: 
-                  <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
-                  <a href="https://www.infomoney.com.br/guias/drex-real-digital/">
-                    https://www.infomoney.com.br/guias/drex-real-digital/</a>
+                    {{ $t('mastodon_toot.post2') }}
                 </p>
               </div>
             </div>
@@ -86,20 +75,14 @@
         </transition>
 
         <transition>
-          <div v-if="selectedNews === 'arstech'" class="modal-overlay" @click.self="closeModal">
+          <div v-if="selectedNews === 'post3'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }} {{ $t('arstech') }}</h3>
+              <h3 class="modal-title">{{ selectedNews.title }} {{ $t('mastodon_title.post3') }}</h3>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    {{ $t('arstechnews') }}                </p>
-                <p style="font-size: 10px">
-                  {{ $t('leia') }}: 
-                  <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
-                  <a href="https://arstechnica.com/ai/2024/10/cheap-ai-video-scraping-can-now-extract-data-from-any-screen-recording/">
-                    https://arstechnica.com/ai/2024/10/cheap-ai-video-scraping-can-now-extract-data-from-any-screen-recording/</a>
-                </p>
+                    {{ $t('mastodon_toot.post3') }}                </p> 
               </div>
             </div>
           </div>
@@ -119,7 +102,7 @@
     methods: {
       async fetchNews() {
         try {
-            console.log('sofutebol.live')
+            console.log('dev.evttenorio.com')
           /*fetch('')
           .then(response => {
                 return response.json();
