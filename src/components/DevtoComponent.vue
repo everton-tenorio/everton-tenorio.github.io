@@ -1,6 +1,6 @@
 <template>
-    <!--<i class="fa-brands fa-dev devto"></i>-->
     <div class="slider-container">
+      <i class="fa-brands fa-dev devto"><p> #community</p></i>
       <carousel :items-to-show="1.5" :pagination="false" :navigation="true">
         <slide 
           v-for="post in posts" 
@@ -64,10 +64,21 @@
 <style scoped>
   .devto {
     color: white;
+    margin-left: 10px;
     font-size: 35px;
+    display: flex;
+  }
+
+  .devto p {
+    font-size: 18px;
+    color: #ffffff2f;
+    position: absolute;
+    margin: 5.5px 40px;
+    font-family: Ubuntu;
   }
 
   .slider-container {
+    margin-top: 50px;
     margin-left: -20px;
     margin-right: -20px;
   }
