@@ -1,5 +1,5 @@
 <template>
-    <i class="fa-brands fa-dev devto"></i> 
+    <!--<i class="fa-brands fa-dev devto"></i>-->
     <div class="slider-container">
       <carousel :items-to-show="1.5" :pagination="false" :navigation="true">
         <slide 
@@ -79,6 +79,7 @@
     transition: transform 0.3s;
     cursor: pointer;
     max-width: 300px;
+    max-height: 200px;
     margin: 0 15px;
     overflow: hidden;
   }
@@ -95,7 +96,7 @@
   .card-image {
     width: 100%;
     height: auto;
-    max-height: 150px; /* Controla a altura da imagem */
+    max-height: 100px; /* Controla a altura da imagem */
     object-fit: cover;
   }
   
@@ -104,12 +105,12 @@
   }
   
   .card-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 5px 0;
   }
   
   .card-info p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #555;
   }
   
@@ -129,4 +130,3 @@
     }
   }
 </style>
-  

@@ -168,6 +168,7 @@
   margin-top: 40px;
   margin-left: -20px;
   margin-right: -20px;
+  margin-bottom: 25px;
   border-radius: 35px;
   background: #232323;
   }
@@ -194,8 +195,8 @@
   
 .img-news {
   border-radius: 100%;
-  width: 50px;
-  height: 50%;
+  width: 15%;
+  height: 60%;
   margin-top: -30px;
   display: flex;
   border: 1px solid black;
@@ -208,13 +209,13 @@
   color: black;
   border: none;
   margin-top: 30px;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 14px;
   padding: 5px 10px 2px 10px;
   width: auto;
-  height: 100px;
+  height: 65px;
   align-items: center;
   box-shadow: 2px 2px 1px #d81515;
 }
@@ -290,7 +291,7 @@
   margin: 0px;
   float: right;
   font-size: 10px;
-  color: #304978;
+  color: #ebebec09;
 }
 
 #badge-ia {

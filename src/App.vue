@@ -5,9 +5,13 @@
         <img src="https://avatars.githubusercontent.com/u/114461163?v=4" alt="Foto de Perfil" class="evt-img">
       </div>
       <h1>Everton Tenório</h1>
+      <div class="carrer">
+        <span id="ocp">DevOps</span> 
+        <span id="ocp">Web Dev.</span>
+      </div>
 
-      <p class="contact">
-        <!-- Botão de escolha de idioma -->
+      <!-- <p class="contact">
+        <! Botão de escolha de idioma ->
         <label class="language-switcher">
           <input type="checkbox" v-model="isEnglish" @change="toggleLanguage">
           <span class="slider round"></span>
@@ -15,10 +19,10 @@
           <span class="select-en"><img src="https://cdn-icons-png.flaticon.com/128/630/630591.png" width="21px" height="21px"/></span>
         </label>
 
-        <!--<a href="https://t.me/evertontenorio" target="_blank" class="telegram-icon">
+        <!-<a href="https://t.me/evertontenorio" target="_blank" class="telegram-icon">
           <i class="fab fa-telegram-plane" style="color: white"></i>
-        </a>-->
-      </p>
+        </a>->
+      </p>-->
     </div>
     <div class="links">
       <a href="https://github.com/everton-tenorio"><button class="link-btn"><i id="iconw" class="fa-brands fa-github"></i></button></a>
@@ -26,30 +30,31 @@
       <button @click="openModal(' ')" class="link-btn"><i id="iconw" class="fa-solid fa-briefcase"></i></button>
     </div>
 
-    <transition name="fade">
+    <!--<transition name="fade">
       <div v-if="selectedLink" class="modal-overlay" @click.self="closeModal">
         <div class="modal">
           <button @click="closeModal" class="close-button">&times;</button>
           <h2 class="modal-title">{{ selectedLink }}</h2>
           <div class="modal-content">
-            <!--<p v-if="selectedLink === 'GitHub'">
+            <--<p v-if="selectedLink === 'GitHub'">
               Github
-            </p>-->
+            </p>--
             <div v-if="selectedLink === ' '">
               <div class="projects">
                 <a href="https://sofutebol.live/"><p id="img-sft">sofutebol<i class="fa-solid fa-bullseye"></i>live</p></a>
                 <a href="https://preco-fipe.vercel.app"><p><img style="border-radius: 55px; border: 2px solid #2089d4" src="./car.png" width="40px"/>preço-FIPE</p></a>            
               </div>
             </div>
-            <!--<p v-if="selectedLink === 'dev.to'">
+            <--<p v-if="selectedLink === 'dev.to'">
               Leia meus artigos técnicos no dev.to, onde compartilho insights sobre programação e tecnologia.
-            </p>-->
+            </p>->
           </div>
         </div>
       </div>
-    </transition>
-    <DevtoComponent />
+    </transition>-->
+
     <NewsComponent />
+    <DevtoComponent />
     <!--<EvttsComponent />-->
     <!--<FooterComponent />-->
   </div>
@@ -106,7 +111,7 @@ export default {
 /* Perfil e Links em Layout Desktop */
 .profile {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 25px;
 }
 
@@ -148,6 +153,19 @@ export default {
   margin-top: 20px;
 }
 
+.carrer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#ocp {
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 10px;
+  color: #727070;
+}
+
 a {
   text-decoration: none;
 }
@@ -157,7 +175,7 @@ a {
   justify-content: space-around;
   padding: 30px;
   margin-bottom: 50px;
-  border: 0.8px dotted #e8dfdf2b;
+  border: 0.8px dotted #e8dfdf49;
   border-radius: 20px;
   border-width: 2px;
 }
