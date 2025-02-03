@@ -53,8 +53,8 @@
       </div>
     </transition>-->
 
-    <NewsComponent />
     <DevtoComponent />
+    <NewsComponent />
     <!--<EvttsComponent />-->
     <!--<FooterComponent />-->
   </div>
