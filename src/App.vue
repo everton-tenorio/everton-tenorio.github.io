@@ -53,6 +53,7 @@
       </div>
     </transition>-->
 
+    <ProjectsComponent />
     <DevtoComponent />
     <NewsComponent />
     <!--<EvttsComponent />-->
@@ -61,6 +62,7 @@
 </template>
 
 <script>
+import ProjectsComponent from './components/ProjectsComponent.vue'
 import DevtoComponent from './components/DevtoComponent.vue'
 import NewsComponent from './components/NewsComponent.vue'
 // import EvttsComponent from './components/EvttsComponent.vue'
@@ -74,6 +76,7 @@ export default {
     }
   },
   components: {
+    ProjectsComponent,
     DevtoComponent,
     NewsComponent,
     // EvttsComponent,
