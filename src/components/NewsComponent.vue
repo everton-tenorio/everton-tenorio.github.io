@@ -23,13 +23,13 @@
           </div>
           
 
-          <div class="card-news">
-            <a href="https://sofutebol.live" style="color:black">
+          <!--<div class="card-news">
+            <a href="https://sofutebol.live" style="color:white">
                 <img class="img-news" src="../assets/sofutebol.png" alt="News image">
                 <h4>{{ $t('sofutebol') }}</h4>
                 <i id="external-link" class="fa fa-external-link"></i>
             </a>
-          </div>
+          </div>-->
         </div>
 
         <div class="card-news" @click="openModal('post2')">
@@ -168,7 +168,7 @@
   margin-top: 20px;
   margin-left: -20px;
   margin-right: -20px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   border-radius: 35px;
   background: #232323;
   }
@@ -205,8 +205,8 @@
   
   /* Estilos dos cards */
 .card-news {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   border: none;
   margin-top: 30px;
   margin-bottom: 45px;
@@ -217,7 +217,7 @@
   width: auto;
   height: 65px;
   align-items: center;
-  box-shadow: 2px 2px 1px #d81515;
+  box-shadow: 0px 2px 1px #d81515;
 }
   
 /* Transição do Modal */
