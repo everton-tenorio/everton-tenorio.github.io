@@ -160,12 +160,13 @@ export default {
   display: flex;
   justify-content: center;
   gap: 10px;
+  font-family: "Ubuntu";
 }
 
 #ocp {
   border-radius: 8px;
   padding: 5px;
-  font-size: 10px;
+  font-size: 11px;
   color: #727070;
 }
 

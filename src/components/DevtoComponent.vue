@@ -71,7 +71,7 @@
 
   .devto p {
     font-size: 18px;
-    color: #ffffff2f;
+    color: #ffffff62;
     position: absolute;
     margin: 5.5px 40px;
     font-family: Ubuntu;
