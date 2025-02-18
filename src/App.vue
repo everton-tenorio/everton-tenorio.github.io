@@ -2,7 +2,7 @@
   <div id="app">
     <div class="profile">
       <div class="profile-img">
-        <img src="https://avatars.githubusercontent.com/u/114461163?v=4" alt="Foto de Perfil" class="evt-img">
+        <img src="https://media2.dev.to/dynamic/image/width=320,height=320,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1142629%2Fc5dca76a-98f6-4f9f-8d94-c8ee971c89e8.jpg" alt="Foto de Perfil" class="evt-img">
       </div>
       <h1>Everton Tenório</h1>
       <div class="carrer">
