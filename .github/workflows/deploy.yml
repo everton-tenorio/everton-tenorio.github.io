@@ -21,14 +21,17 @@ jobs:
         run: npm install
 
       - name: build
-        run: npm run build
+        run: npx nuxi generate
 
       - name: CP CNAME
-        run: echo 'dev.evttenorio.com' > .output/server/CNAME
+        run: echo 'dev.evttenorio.com' > .output/public/CNAME
+
+      - name: Add .nojekyll
+        run: touch .output/public/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .output/server/
+          publish_dir: .output/public
 
