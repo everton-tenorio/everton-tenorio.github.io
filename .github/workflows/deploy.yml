@@ -24,11 +24,11 @@ jobs:
         run: npm run build
 
       - name: CP CNAME
-        run: echo 'dev.evttenorio.com' > ./dist/CNAME
+        run: echo 'dev.evttenorio.com' > .output/server/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: .output/server/
 
