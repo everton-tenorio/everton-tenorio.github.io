@@ -29,7 +29,7 @@
             </a>
             <a href="https://dev.to/evertontenorio" class="flex items-center">
               <FontAwesomeIcon
-                icon="fa-brands fa-linkedin"
+                icon="fa-brands fa-telegram"
                 class="text-gray-500 text-xl md:text-base bg-gray-200 md:bg-transparent p-2 md:p-0 rounded-full hover:bg-gray-300 md:hover:bg-transparent transition-colors"
               />
             </a>

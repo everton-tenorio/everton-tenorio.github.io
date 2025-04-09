@@ -28,7 +28,7 @@
     },
     {
       name: 'twish',
-      description: 'Tweets in Shell: A CLI that uses shellcript + xurl to post, reply, and delete tweets',
+      description: 'twish: Tweets in Shell! 🐦‍⬛',
       url: 'https://github.com/everton-tenorio/twish',
     },
     {
