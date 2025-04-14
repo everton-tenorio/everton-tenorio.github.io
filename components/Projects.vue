@@ -23,7 +23,7 @@
   const projects = ref([
     {
       name: 'cty',
-      description: 'Convententional Commits + Python = cty',
+      description: 'Conventional Commits + Python = cty',
       url: 'https://github.com/everton-tenorio/cty',
     },
     {
