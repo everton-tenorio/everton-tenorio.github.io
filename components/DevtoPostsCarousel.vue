@@ -1,6 +1,6 @@
 <template>
   <div class="w-full relative">
-    <div class="lg:mt-8 mt-10 mb-5">
+    <div class="mt-20 mb-5">
       <span class="text-gray-500 px-1.5 py-1 font-[Ubuntu]">
         <FontAwesomeIcon icon="fa-brands fa-dev" class="text-4xl text-white" />
       </span>
