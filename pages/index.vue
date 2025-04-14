@@ -7,7 +7,7 @@
         </div>
   
         <!-- Coluna direita: Conteúdo principal -->
-        <div class="flex-1 lg:ml-10 lg:mr-0 lg:w-8">
+        <div class="flex-1 lg:ml-4 lg:mr-1 lg:w-8">
           <Projects />
           <DevtoPostsCarousel />
         </div>

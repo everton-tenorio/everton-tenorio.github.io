@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full font-[Ubuntu] mt-5 pb-12 lg:mb-7 lg:mt-0">
-      <div class="relative lg:h-[1cover bg-center shado0,0,0,0.47)] lg:mx-[-20px] lg:mt-[-10px] lg:mb-2">
+    <div class="w-full font-[Ubuntu] mt-8 pb-12 lg:mb-7 lg:mt-0">
+      <div class="relative lg:h-[1cover bg-center shado0,0,0,0.47)] lg:mx-[-0px] lg:mt-[-10px] lg:mb-2">
         
         <div id="particles-container" class="absolute top-0 left-0 w-full h-[100px] overflow-hidden z-[1]"></div>
-        <h3 class="text-white text-[1.5rem] text-left pt-5 z-[2] relative">
+        <h3 class="text-white text-lg lg:text-[1.5rem] text-left pt-5 z-[2] relative">
           <a :href="currentProject.url">
             <span class="text-[#fdf8f893] text-xs rounded px-1.5 py-0.5 font-[Ubuntu]">
               <FontAwesomeIcon icon="fa-brands fa-github" class="text-3xl text-white" />
@@ -23,7 +23,7 @@
   const projects = ref([
     {
       name: 'cty',
-      description: 'Conventional Commits + Python + CLI = cty',
+      description: 'Convententional Commits + Python = cty',
       url: 'https://github.com/everton-tenorio/cty',
     },
     {
