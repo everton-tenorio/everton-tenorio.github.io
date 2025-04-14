@@ -31,7 +31,7 @@
       <!-- Ícones de navegação -->
       <button
         v-if="showLeftArrow"
-        class="hidden lg:block absolute left-[-15px] top-1/2 -translate-y-2 border border-[gray] rounded-md hover:text-gray-600 p-2 shadow-md z-10 bg-gray-100 hover:bg-gray-300 transition"
+        class="hidden lg:block absolute left-[-10px] top-1/2 -translate-y-2 border border-[gray] rounded-md hover:text-gray-600 p-2 shadow-md z-10 bg-gray-100 hover:bg-gray-300 transition"
         @click="scrollToLeft"
       >
         <FontAwesomeIcon icon="fa-solid fa-chevron-left" class="text-gray-600" />
