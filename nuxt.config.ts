@@ -3,8 +3,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
-  theme: "light",
   css: ['~/assets/css/tailwind.css'],
+  build: {
+    transpile: ['gray-matter']
+  },
+  vite: {
+    build: {
+      target: 'es2022'
+    }
+  },
 
   app: {
     head: {
