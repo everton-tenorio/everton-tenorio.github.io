@@ -21,6 +21,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@tailwindcss/typography": "^0.5.16",
+    "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
     "nuxt": "^3.16.2",
