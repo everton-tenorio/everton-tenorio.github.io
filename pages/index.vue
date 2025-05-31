@@ -173,9 +173,9 @@ onBeforeUnmount(() => {
 
 // Meta tags para SEO
 useHead({
-  title: 'Meu Blog - Página Inicial',
+  title: 'Everton Tenorio - DevOps Engineer',
   meta: [
-    { name: 'description', content: 'Blog pessoal com posts sobre desenvolvimento e tecnologia' }
+    { name: 'description', content: 'Desenvolvimento e tecnologia' }
   ]
 })
 </script>
