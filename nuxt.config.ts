@@ -12,6 +12,14 @@ export default defineNuxtConfig({
       target: 'es2022'
     }
   },
+  script: [
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6910560588851575',
+      async: true,
+      crossorigin: 'anonymous'
+    }
+  ],
+
 
   app: {
     head: {
@@ -20,7 +28,11 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { hid: 'description', name: 'description', content: '' },
-        { name: 'keywords', content: 'devops, software enginner, linux, python, llm, terraform, aws' }
+        { name: 'keywords', content: 'devops, software enginner, linux, python, llm, terraform, aws' },
+        {
+          name: 'google-site-verification',
+          content: 'KmVSZKTOpdgPFxe0B_009vEhgdOEfpz3r5uT2QGIH-s'
+        }
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     }
