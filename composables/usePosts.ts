@@ -21,7 +21,11 @@ export interface Post {
   content: string
 }
 
-const md = new MarkdownIt()
+const md = new MarkdownIt({
+  html: true, // <--- ESSENCIAL para permitir tags HTML como <iframe>, <small>, etc.
+  linkify: true,
+  breaks: true
+})
 const posts = ref<Post[]>([])
 const isLoading = ref(false)
 const isInitialized = ref(false)

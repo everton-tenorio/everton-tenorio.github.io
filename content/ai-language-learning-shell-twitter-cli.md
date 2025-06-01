@@ -4,7 +4,7 @@ date: 2025-06-01
 slug: ai-language-learning-shell-twitter-cli
 description: ""
 tags: ["x", "twitter", "genAI", "shell script", "cli", "english", "gemini"]
-bannerImage: ""
+bannerImage: "https://github.com/everton-tenorio/twish/raw/main/twish.jpg"
 ---
 
 Using shell script and the `xurl` library (a tool for interacting with the X API), I created a CLI to manage tweets directly from the shell. Then, aiming to improve my English skills beyond simple word-for-word reading and writing, I used Google’s generative AI model **Gemini 1.5 Flash** to translate the posts in a natural way, fostering immersive learning.
@@ -15,4 +15,6 @@ Using an **LLM** to translate tweets requires analyzing and reviewing translatio
 
 One example of how this approach can be applied is for **freelancers** who face communication barriers with international clients. By replacing the X API with platforms like **Slack**, **Teams**, or **LinkedIn**, this methodology could be adapted to translate professional messages, expanding its usefulness in various communicative contexts.
 
+<center>
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7302370497680306177?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+</center>
