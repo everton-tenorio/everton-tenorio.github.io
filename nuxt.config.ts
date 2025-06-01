@@ -12,14 +12,6 @@ export default defineNuxtConfig({
       target: 'es2022'
     }
   },
-  script: [
-    {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6910560588851575',
-      async: true,
-      crossorigin: 'anonymous'
-    }
-  ],
-
 
   app: {
     head: {
@@ -32,6 +24,10 @@ export default defineNuxtConfig({
         {
           name: 'google-site-verification',
           content: 'KmVSZKTOpdgPFxe0B_009vEhgdOEfpz3r5uT2QGIH-s'
+        },
+        {
+          name: 'google-adsense-account',
+          content: 'ca-pub-6910560588851575',
         }
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
