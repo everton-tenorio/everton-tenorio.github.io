@@ -253,4 +253,11 @@ if (process.client && !post.value && posts.value.length > 0) {
 .prose th {
   @apply bg-gray-100 font-semibold;
 }
+
+iframe {
+display: block;
+margin: auto;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 30px;
+}
 </style>
