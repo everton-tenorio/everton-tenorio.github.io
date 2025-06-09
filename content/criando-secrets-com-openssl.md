@@ -10,7 +10,7 @@ bannerImage: "https://130e178e8f8ba617604b-8aedd782b7d22cfe0d1146da69a52436.ssl.
 Eu já sabia que era possível gerar valores aleatórios com openssl, mas uma resposta qualquer
 de alguma llm me fez relembrar a possibilidade de utilizar o comando para senhas/segredos.
 
-Então copie e cole na sua variável do .env ou em algum gerenciador, o seguinte resultado:
+Então copie e cole na sua variável do .env ou em algum gerenciador, resultado de:
 
 ```bash
 $ openssl rand -hex 32
