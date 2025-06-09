@@ -5,7 +5,7 @@
     :to="`/posts/${post.slug}`"
     class="group block bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
   >
-    <div v-if="post.bannerImage" class="h-48 overflow-hidden">
+    <div v-if="post.bannerImage" class="h-32 overflow-hidden">
       <img
         :src="post.bannerImage"
         :alt="post.title"

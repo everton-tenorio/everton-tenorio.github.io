@@ -36,38 +36,22 @@
         </a>
 
         <a
-          href="https://dev.to/evertontenorio"
+          href="https://linkedin.com/in/everton-st"
           target="_blank"
           rel="noopener"
-          aria-label="Dev.to"
+          aria-label="LinkedIn"
           class="group"
         >
           <div
             class="flex items-center justify-center w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors shadow-sm"
           >
             <FontAwesomeIcon
-              icon="fa-brands fa-dev"
+              icon="fa-brands fa-linkedin"
               class="text-gray-700 dark:text-gray-200 text-xl"
             />
           </div>
         </a>
 
-        <a
-          href="https://t.me/evertontenorio"
-          target="_blank"
-          rel="noopener"
-          aria-label="Telegram"
-          class="group"
-        >
-          <div
-            class="flex items-center justify-center w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors shadow-sm"
-          >
-            <FontAwesomeIcon
-              icon="fa-brands fa-telegram"
-              class="text-gray-700 dark:text-gray-200 text-xl"
-            />
-          </div>
-        </a>
       </div>
     </div>
   </aside>
