@@ -77,7 +77,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import Profile from '~/components/Profile.vue'
 import Projects from '~/components/Projects.vue'
 import DevtoPostsCarousel from '~/components/DevtoPostsCarousel.vue'
@@ -106,21 +106,28 @@ const onScroll = () => {
   updateScrollButtons()
 }
 
+watch(posts, async (newVal) => {
+  if (newVal.length) {
+    await nextTick()
+    updateScrollButtons()
+  }
+})
+
 onMounted(() => {
   nextTick(() => {
     updateScrollButtons()
+    setTimeout(updateScrollButtons, 300) // forçar checagem mesmo após fontes/imagens
+
     const el = carouselRef.value
     if (el) {
       el.addEventListener('scroll', onScroll, { passive: true })
     }
 
-    // ResizeObserver mais robusto que resize simples
     const observer = new ResizeObserver(updateScrollButtons)
-    observer.observe(el!)
+    if (el) observer.observe(el)
 
     window.addEventListener('resize', updateScrollButtons)
 
-    // Cleanup
     onBeforeUnmount(() => {
       el?.removeEventListener('scroll', onScroll)
       observer.disconnect()
