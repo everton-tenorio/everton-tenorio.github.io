@@ -255,9 +255,17 @@ if (process.client && !post.value && posts.value.length > 0) {
 }
 
 iframe {
-display: block;
-margin: auto;
-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 30px;
+  display: block;
+  margin: auto;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding-top: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  iframe {
+    width: 100%;
+    height: 350px;
+  }
+} 
 </style>
