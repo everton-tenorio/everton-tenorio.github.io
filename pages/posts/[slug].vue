@@ -100,6 +100,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, nextTick } from 'vue'
 import { computed } from 'vue'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
@@ -163,6 +164,22 @@ if (process.client && !post.value && posts.value.length > 0) {
     statusMessage: 'Post não encontrado'
   })
 }
+
+onMounted(() => {
+  nextTick(() => {
+    // 1) injeta um <style> no <head> que desabilita as crases de TODO código
+    const styleTag = document.createElement('style')
+    styleTag.textContent = `
+      /* desliga crases geradas por prose typography */
+      .prose code::before,
+      .prose code::after {
+        content: none !important;
+      }
+    `
+    document.head.appendChild(styleTag)
+  })
+})
+
 </script>
 
 <style>
@@ -266,6 +283,16 @@ iframe {
   iframe {
     width: 100%;
     height: 350px;
+  }
+
+  .prose code {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;  /* adiciona scroll horizontal se ultrapassar */
+    white-space: nowrap;
+    margin-bottom: -5px;
+    padding-bottom: 0px;
+    padding-top: 0px;
   }
 } 
 </style>
