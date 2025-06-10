@@ -285,6 +285,15 @@ iframe {
     height: 350px;
   }
 
+  .prose pre {
+    background: #1b1b1b;
+  }
+  
+  .prose pre code {
+    color: #1be446;
+    white-space: break-spaces;
+  }
+
   .prose code {
     display: inline-block;
     max-width: 100%;
