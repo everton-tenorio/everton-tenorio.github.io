@@ -3,7 +3,7 @@ title: "Portalfut: Mundial de Clubes FIFA 2025"
 date: 2025-06-15
 slug: portalfut-mundial-clubes-2025
 description: ""
-tags: ["futebol", "mundial de clubes 2025", "fifa", "portalfut script"]
+tags: ["futebol", "mundial de clubes 2025", "fifa", "portalfut.com"]
 bannerImage: "https://i.ibb.co/YF7DDhZx/Screenshot-2025-05-23-at-23-03-58-pfb-png-imagem-PNG-1024-1536-pixels.png"
 ---
 
