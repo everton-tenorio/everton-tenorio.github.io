@@ -3,7 +3,7 @@ title: "Vou atravessar o oceano Atlântico sozinho de remo"
 date: 2025-07-01
 slug: vou-atravessar-o-oceano-atlantico-sozinho-de-remo
 description: ""
-tags: ["barco IAT", "almyr klink"]
+tags: ["barco IAT", "amyr klink"]
 bannerImage: "https://media-cdn.tripadvisor.com/media/photo-s/1a/e4/d1/35/replica-do-paraty-usado.jpg"
 ---
 
