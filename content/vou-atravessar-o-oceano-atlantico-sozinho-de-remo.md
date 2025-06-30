@@ -28,8 +28,7 @@ Entrou pra história, mas não suficiente, Amyr também foi pra Antártica mais 
 
 Precisa ser muito doido pra fazer isso, sair da zona de conforto assim, bater de frente com o nada, abrir mão do “certo”, da estabilidade, do dinheiro, de contrariar, e simplesmente dizer: foda-se. Dá meu barco e já era.
 
-A história do Amyr apareceu num momento certo pra mim. Não é apreço pela falta de noção, o diferentão. Mas porque ali tem algo real. Propósito. Esforço. Simplicidade. E essa ideia de que você pode saber muito, mesmo sem diploma na parede, abandonar 
-o supérfluo, superficial, o caminho mais fácil, likes, elimiar o desnecessário, encontrar novas respostas na natureza, não desperdiçar, sobre o que realmente é necessário para viver, o que importa e vale, mesmo que muitas vezes completamente sozinho.
+A história do Amyr apareceu num momento certo pra mim. Não é apreço pela falta de noção, o diferentão. Mas porque ali tem algo real. Propósito. Esforço. Simplicidade. E essa ideia de que você pode saber muito, mesmo sem diploma na parede, abandonar o supérfluo, superficial, o caminho mais fácil, likes, elimiar o desnecessário, encontrar novas respostas na natureza, não desperdiçar, sobre o que realmente é necessário para viver, o que importa e vale, mesmo que muitas vezes completamente sozinho.
 
 As aventuras do Amyr estão documentadas. Tem livro, entrevista, documentário. Procura na Amazon ou no YouTube. Enquanto isso, sigo vivendo minhas loucuras não documentadas, e quem sabe, de forma despretensiosa, algum algoritmo ou só o acaso mesmo, me indique aqueles que também anda na contramão, que prefere ir até a Antártica conversar com penguins ou focas. 
 
