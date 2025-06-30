@@ -26,7 +26,7 @@ Cem dias em alto-mar, remando por algo em torno de 3700 milhas. Nenhuma equipe d
 
 Entrou pra história, mas não suficiente, Amyr também foi pra Antártica mais de 20 vezes, construiu um veleiro polar, o Paratii, projetado pra resistir ao gelo, navegou por áreas que vários navios não se arriscariam. Ficou meses sozinho em pleno oceano, enfrentou temperaturas absurdas, solidão, silêncio, etc.
 
-Precisa ser muito doido pra fazer isso, sair da zona de conforto assim, bater de frente com o nada, abrir mão do “certo”, da estabilidade, do dinheiro, de contrariar, e simplesmente dizer: foda-se. Dá meu barco e já era.
+Precisa ser muito doido pra fazer isso, sair da zona de conforto, não ficar só na teoria, bater de frente com o nada, abrir mão do “certo”, da estabilidade, do dinheiro, de contrariar, e simplesmente dizer: foda-se. Dá meu barco e já era.
 
 A história do Amyr apareceu num momento certo pra mim. Não é apreço pela falta de noção, o diferentão. Mas porque ali tem algo real. Propósito. Esforço. Simplicidade. E essa ideia de que você pode saber muito, mesmo sem diploma na parede, abandonar o supérfluo, superficial, o caminho mais fácil, likes, elimiar o desnecessário, encontrar novas respostas na natureza, não desperdiçar, sobre o que realmente é necessário para viver, o que importa e vale, mesmo que muitas vezes completamente sozinho.
 
