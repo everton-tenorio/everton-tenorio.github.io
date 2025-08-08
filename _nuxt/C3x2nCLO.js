@@ -1,9 +1,9 @@
 const e=`---
 title: "Matrix Strategy: Paralelização Inteligente em Pipelines CI/CD"
-date: 2025-08-07
+date: 2025-08-09
 slug: matrix-strategy-paralelizacao-inteligente-pipelines-cicd
 description: ""
-tags: ["matrix-strategy", "github-actions", "ci-cd", "devops", "pipeline-paralelizacao", "automacao-testes", "integracao-continua", "desenvolvimento-agil", "otimizacao-pipeline", "yaml-configuration", "fail-fast", "max-parallel", "testing-strategy", "devops-tools", "continuous-integration"]
+tags: ["matrix-strategy", "github-actions", "ci-cd", "devops", "pipeline-paralelizacao", "automacao-testes", "integracao-continua", "desenvolvimento-agil", "testing-strategy", "continuous-integration"]
 bannerImage: "https://i.ibb.co/nqW2jVQ9/matrix-strategy1.png"
 ---
 
