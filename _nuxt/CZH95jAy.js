@@ -4,7 +4,7 @@ date: 2025-08-21
 slug: "guia-rapido-web-scraping-python"
 description: ""
 tags: ["python", "web scraping", "crawler", "beautifulsoup", "requests", "automação", "data mining"]
-bannerImage: ""
+bannerImage: "https://i.ibb.co/5xY4x7zy/web-scraping.png"
 ---
 
 
