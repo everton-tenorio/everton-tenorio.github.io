@@ -24,7 +24,7 @@ No Colab, basta instalar o \`chromium-chromedriver\` e o \`selenium\`:
 !pip install selenium
 \`\`\`
 
-<img href="https://i.ibb.co/cS8pRZns/Screenshot-2025-08-28-at-11-25-00-Untitled0-ipynb-Colab.png" />
+![install chromedriver and selenium](href="https://i.ibb.co/cS8pRZns/Screenshot-2025-08-28-at-11-25-00-Untitled0-ipynb-Colab.png)
 
 ---
 
@@ -32,15 +32,15 @@ No Colab, basta instalar o \`chromium-chromedriver\` e o \`selenium\`:
 
 O site acessado será o \`portalfut.com\`, um agregador de notícias de Futebol. Um exemplo de site que carrega conteúdo via Javascript.
 
-<img href="https://i.ibb.co/p6dysWyn/Screenshot-2025-08-28-at-11-27-02-Portal-Fut-Not-cias-e-Agenda-de-Futebol.png"/>
+![Portalfut.com](https://i.ibb.co/p6dysWyn/Screenshot-2025-08-28-at-11-27-02-Portal-Fut-Not-cias-e-Agenda-de-Futebol.png)
 
 ## Código de Exemplo
 
 O script abaixo acessa o site, captura o título da página e em seguida coleta as 5 primeiras notícias renderizadas via JavaScript.
 
-<img href="https://i.ibb.co/9H7x1dF1/Screenshot-2025-08-28-at-11-25-27-Untitled0-ipynb-Colab.png" />
+![code colab](https://i.ibb.co/9H7x1dF1/Screenshot-2025-08-28-at-11-25-27-Untitled0-ipynb-Colab.png)
 
-<img href="https://i.ibb.co/XkF0CYY7/Screenshot-2025-08-28-at-11-28-15-Untitled0-ipynb-Colab.png" />
+![output code colab](https://i.ibb.co/XkF0CYY7/Screenshot-2025-08-28-at-11-28-15-Untitled0-ipynb-Colab.png)
 
 
 > Note que usamos o seletor \`div.bg-gray-900 a\` para identificar os blocos de notícias. Dentro de cada card, extraímos o título (tag \`<h3>\`) e o link (\`href\` do \`<a>\`).
