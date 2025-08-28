@@ -24,7 +24,7 @@ No Colab, basta instalar o `chromium-chromedriver` e o `selenium`:
 !pip install selenium
 ```
 
-![install chromedriver and selenium](href="https://i.ibb.co/cS8pRZns/Screenshot-2025-08-28-at-11-25-00-Untitled0-ipynb-Colab.png)
+![install chromedriver and selenium](https://i.ibb.co/cS8pRZns/Screenshot-2025-08-28-at-11-25-00-Untitled0-ipynb-Colab.png)
 
 ---
 
