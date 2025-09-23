@@ -8,7 +8,7 @@ bannerImage: "https://i.ibb.co/9mwJ1Gft/nginx-log.png"
 ---
 Gerar logs do nginx em formato JSON facilita demais as análises e o monitoramento quando você integra com ferramentas como ELK, Grafana, Datadog, etc.
 
-Pra configurar basta adicionar uma nova definição de \`log_format\` no arquivo de configuração do Nginx, \`nginx.conf\`.
+Pra configurar basta adicionar no "http{}" uma nova definição de \`log_format\` no arquivo de configuração do Nginx, \`nginx.conf\`.
 
 \`\`\`nginx
 log_format json_logs escape=json
@@ -33,4 +33,26 @@ Assim, você consegue visualizar os logs de forma estruturada em ferramentas de 
 - Padronização de logs entre diferentes serviços.
 - Melhor desempenho nas consultas e dashboards.
 - Menos trabalho de parsing por conta da chave-valor.
+
+### Teste
+Feito a configuração vamos subir um container com um arquivo do nginx local. E no final visualizar o log.
+
+\`\`\`bash
+docker run -d --name nginx-json \\
+  -p 8080:80 \\
+  -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro \\
+  nginx:alpine
+
+\`\`\`
+
+depois fazemos algumas requisições para verficiar o arquivo:
+
+\`\`\`bash
+curl http://localhost:8080/
+curl http://localhost:8080/test
+
+\`\`\`
+
+e taí:
+![teste nginx json logs](https://i.ibb.co/8gNMJDBs/teste.png)
 `;export{n as default};
