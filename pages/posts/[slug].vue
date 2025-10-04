@@ -1,6 +1,14 @@
+<!-- pages/posts/[slug].vue -->
 <template>
   <div class="min-h-screen bg-gray-50">
-    <div v-if="error" class="max-w-4xl mx-auto px-4 py-16 text-center">
+    <!-- Loading -->
+    <div v-if="isLoading" class="max-w-4xl mx-auto px-4 py-16 text-center">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+      <p class="mt-4 text-gray-600">Carregando post...</p>
+    </div>
+
+    <!-- Erro -->
+    <div v-else-if="error" class="max-w-4xl mx-auto px-4 py-16 text-center">
       <div class="text-6xl mb-6">❌</div>
       <h1 class="text-3xl font-bold text-gray-900 mb-4">Erro ao carregar o post</h1>
       <p class="text-gray-600 mb-8">{{ error }}</p>
@@ -12,7 +20,8 @@
       </NuxtLink>
     </div>
     
-    <div v-else-if="!post" class="max-w-4xl mx-auto px-4 py-16 text-center">
+    <!-- Post não encontrado (só aparece quando posts foram carregados e post não existe) -->
+    <div v-else-if="!post && isInitialized" class="max-w-4xl mx-auto px-4 py-16 text-center">
       <div class="text-6xl mb-6">🔍</div>
       <h1 class="text-3xl font-bold text-gray-900 mb-4">Post não encontrado</h1>
       <p class="text-gray-600 mb-8">O post que você procura não existe ou foi removido.</p>
@@ -24,7 +33,8 @@
       </NuxtLink>
     </div>
     
-    <article v-else class="bg-white">
+    <!-- Post encontrado -->
+    <article v-else-if="post" class="bg-white">
       <!-- Banner Image -->
       <div v-if="post.bannerImage" class="w-full h-64 md:h-96 overflow-hidden">
         <img
@@ -100,8 +110,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, nextTick } from 'vue'
-import { computed } from 'vue'
+import { onMounted, nextTick, computed } from 'vue'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { usePosts } from '~/composables/usePosts'
@@ -109,7 +118,7 @@ import type { Post } from '~/composables/usePosts'
 
 const route = useRoute()
 const slugParam = route.params.slug as string
-const { posts } = usePosts()
+const { posts, isLoading, isInitialized } = usePosts()
 
 const post = computed<Post | undefined>(() =>
   posts.value.find(p => p.slug === slugParam)
@@ -157,20 +166,11 @@ useHead(() => ({
   ]
 }))
 
-// Se o post não existe, retorna 404
-if (process.client && !post.value && posts.value.length > 0) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: 'Post não encontrado'
-  })
-}
-
 onMounted(() => {
   nextTick(() => {
-    // 1) injeta um <style> no <head> que desabilita as crases de TODO código
+    // Desabilita as crases de TODO código
     const styleTag = document.createElement('style')
     styleTag.textContent = `
-      /* desliga crases geradas por prose typography */
       .prose code::before,
       .prose code::after {
         content: none !important;
@@ -179,7 +179,6 @@ onMounted(() => {
     document.head.appendChild(styleTag)
   })
 })
-
 </script>
 
 <style>
@@ -297,11 +296,11 @@ iframe {
   .prose code {
     display: inline-block;
     max-width: 100%;
-    overflow-x: auto;  /* adiciona scroll horizontal se ultrapassar */
+    overflow-x: auto;
     white-space: nowrap;
     margin-bottom: -5px;
     padding-bottom: 0px;
     padding-top: 0px;
   }
-} 
+}
 </style>

@@ -11,11 +11,11 @@
     <h2 class="text-center  text-xl font-bold text-[white] dark:text-white font-[Ubuntu]">
       Everton Tenorio
     </h2>
-    <p class="text-center text-gray-600 dark:text-gray-400">
-      DevOps | Software Engineer
+    <p class="text-center text-gray-500 dark:text-gray-400">
+      DevOps
     </p>
 
-    <!-- Redes Sociais -->
+    <!-- Redes Sociais --
     <div class="mt-6 text-center">
       <div class="inline-flex items-center justify-center gap-4">
         <a
@@ -53,7 +53,7 @@
         </a>
 
       </div>
-    </div>
+    </div>-->
   </aside>
 </template>
 

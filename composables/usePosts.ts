@@ -22,10 +22,11 @@ export interface Post {
 }
 
 const md = new MarkdownIt({
-  html: true, // <--- ESSENCIAL para permitir tags HTML como <iframe>, <small>, etc.
+  html: true,
   linkify: true,
   breaks: true
 })
+
 const posts = ref<Post[]>([])
 const isLoading = ref(false)
 const isInitialized = ref(false)
@@ -44,7 +45,6 @@ async function loadPosts() {
     const postPromises = Object.entries(modules).map(async ([path, loader]) => {
       const rawContent = await loader() as string
       const { data: frontmatter, content: markdownBody } = matter(rawContent)
-      
       const fileName = path.split('/').pop()?.replace('.md', '') || ''
       const slug = frontmatter.slug || fileName
       
@@ -77,14 +77,22 @@ async function loadPosts() {
   }
 }
 
+// Função para buscar um post específico por slug
+export function getPostBySlug(slug: string): Post | undefined {
+  return posts.value.find(post => post.slug === slug)
+}
+
 export function usePosts() {
-  if (process.client && !isInitialized.value && !isLoading.value) {
+  // Sempre carrega os posts se ainda não foram carregados
+  if (!isInitialized.value && !isLoading.value) {
     loadPosts()
   }
-
+  
   return {
     posts: readonly(posts),
     isLoading: readonly(isLoading),
-    refresh: loadPosts
+    isInitialized: readonly(isInitialized),
+    refresh: loadPosts,
+    getPostBySlug
   }
 }

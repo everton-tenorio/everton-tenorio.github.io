@@ -70,6 +70,7 @@
 
         <div class="mt-4 mb-[10px] lg:mb-[2px] p-2">
           <Projects />
+          <TechSkillsShowcase />
         </div>
       </div>
     </div>
@@ -81,6 +82,7 @@ import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import Profile from '~/components/Profile.vue'
 import Projects from '~/components/Projects.vue'
 import DevtoPostsCarousel from '~/components/DevtoPostsCarousel.vue'
+import TechSkillsShowcase from '~/components/TechSkillsShowcase.vue'
 import { usePosts } from '~/composables/usePosts'
 
 const { posts, isLoading } = usePosts()
