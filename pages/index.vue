@@ -3,7 +3,7 @@
     <!-- Cabeçalho removido temporariamente -->
   </header>
 
-  <div class="container mx-auto px-4 pt-5 lg:mt-2 pb-20 lg:px-20 lg:py-12">
+  <div class="container mx-auto px-4 pt-5 lg:mt-2 lg:px-20 lg:py-12">
     <div class="flex flex-col md:flex-row gap-6">
       <div class="lg:mt-8">
         <Profile />
@@ -70,6 +70,7 @@
 
         <div class="mt-4 mb-[10px] lg:mb-[2px] p-2">
           <Projects />
+          <PhotoAlbums />
           <TechSkillsShowcase />
         </div>
       </div>
@@ -82,6 +83,7 @@ import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import Profile from '~/components/Profile.vue'
 import Projects from '~/components/Projects.vue'
 import DevtoPostsCarousel from '~/components/DevtoPostsCarousel.vue'
+import PhotoAlbums from '~/components/PhotoAlbums.vue'
 import TechSkillsShowcase from '~/components/TechSkillsShowcase.vue'
 import { usePosts } from '~/composables/usePosts'
 

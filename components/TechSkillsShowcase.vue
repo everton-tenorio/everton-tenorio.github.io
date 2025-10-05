@@ -26,7 +26,7 @@
           </div>
         </div>
         
-        <div class="text-1xl md:text-4xl lg:text-5xl text-white font-bold mb-2 tracking-tight">
+        <div class="text-1xl md:text-3xl lg:text-3xl text-white font-bold mb-2 tracking-tight">
           <span class="text-green-400">&gt;</span> evttenorio@outlook.com
         </div>
         <div class="text-gray-500 text-sm">
@@ -133,7 +133,7 @@
             <div class="flex items-start gap-3">
               <span class="text-gray-600 text-xs mt-0.5">{{ formatTime(3) }}</span>
               <div class="flex-1">
-                <span class="text-purple-400">[CREATIVE]</span>
+                <span class="text-white">[CREATIVE]</span>
                 <span class="text-[#01fa23] ml-2">Breaking conventional solutions with innovative approaches</span>
               </div>
             </div>

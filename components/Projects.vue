@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full font-[Ubuntu] mt- pb-12 lg:mb-7 lg:mt-0">
-      <div class="absolute lg:h-[1cover bg-center shado0,0,0,0.47)] lg:mx-[-0px] lg:mt-[-10px] lg:mb-2">
+    <div class="w-full font-[Ubuntu] pb-12">
+      <div class="absolute lg:h-[1cover bg-center shado0,0,0,0.47)] lg:mx-[-0px]">
         
         <!--<div id="particles-container" class="absolute top-0 left-0 w-full h-[100px] overflow-hidden z-[1]"></div>-->
         <h3 class="text-white text-[30px] lg:text-[1.5rem] text-left pt-5 z-[2] relative">
