@@ -200,7 +200,7 @@ const albums = ref<Album[]>([
     description: 'CPBR12',
     cover: 'https://i.ibb.co/bgHJHFLd/IMG-20190216-112522.jpg',
     images: [
-        'https://i.ibb.co/4n1KYGfw/IMG-20190211-152925.jpg',
+        'https://i.ibb.co/Kxy1xtnH/IMG-20251005-012559-866.webp',
         'https://i.ibb.co/GfSZ3Mwg/IMG-20190214-165324.jpg',
         'https://i.ibb.co/ccj5nvPy/IMG-20190214-150438.jpg',
         'https://i.ibb.co/4R9HfFrg/IMG-20190216-120216.jpg',
