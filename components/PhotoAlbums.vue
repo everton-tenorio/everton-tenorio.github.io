@@ -163,6 +163,9 @@ const albums = ref<Album[]>([
     cover: 'https://i.ibb.co/d4HKMHvq/IMG-20251004-221443-478.jpg',
     images: [
       'https://i.ibb.co/d4HKMHvq/IMG-20251004-221443-478.jpg',
+      'https://i.ibb.co/p6mpg0Rn/daa92e70-ab80-4f4d-abc6-63b764433093-20251005-223102-0000.jpg',
+      'https://i.ibb.co/1JMBwVzn/d1f81d38-cebb-4610-a3a5-7e5631f33258-20251005-222330-0000.jpg',
+      'https://i.ibb.co/0ySXb7WF/IMG-20251005-150609-083.jpg'
     ],
     size: 'col-span-2 row-span-2',
     ratio: '1/1'
