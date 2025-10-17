@@ -1,5 +1,5 @@
 ---
-title: "C - agora é papo de coach"
+title: "C agora é papo de coach"
 date: 2025-06-01
 slug: c-papo-de-coach
 description: ""
