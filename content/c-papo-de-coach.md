@@ -1,6 +1,6 @@
 ---
 title: "C agora é papo de coach"
-date: 2025-06-01
+date: 2025-10-13
 slug: c-papo-de-coach
 description: ""
 tags: ["C", "coach", "marçal", "guru"]
