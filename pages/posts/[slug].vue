@@ -278,6 +278,13 @@ iframe {
   padding-top: 10px;
 }
 
+.imgcrd {
+  margin-left: 25%;
+  margin-right: 25%;
+  display:flex;
+  justify-content:center;
+}
+
 @media only screen and (max-width: 600px) {
   iframe {
     width: 100%;
