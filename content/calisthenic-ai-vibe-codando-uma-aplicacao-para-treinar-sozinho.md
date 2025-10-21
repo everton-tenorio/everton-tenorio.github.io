@@ -17,9 +17,9 @@ O resultado?
 
 > Nem terminei o app... e nem mudei o shape 🤣.
 
-Mesmo assim, continuei treinando de vez em quando. Mas, aproveitei a ideia anterior e criei uma nova versão, agora com uma novidade: **contabilizar as repetições por áudio e registrar automaticamente na aplicação**.
+Mesmo assim, continuei treinando de vez em quando. Mas, aproveitei a ideia anterior e criei uma nova versão, agora com uma novidade: **contabilizar as repetições por reconhecimento de voz e registrar automaticamente na aplicação**.
 
-No pain no gain, ou seja, o **Claude** (modelo da Anthropic) até tentou me ajudar com essa parte, mas não conseguiu entregar a feature com sucesso. Penso em mudar muita coisa de css, mas ainda assim, a aplicação ficou usável e para mim está ok, tendo resultados é o que importa.
+No pain no gain, ou seja, o **Claude** (modelo da Anthropic) até tentou me ajudar com essa parte, mas não conseguiu entregar a feature com sucesso. Penso em mudar muita coisa de css, e adicionar novos comandos para o reconhecimento de voz, mas ainda assim, a aplicação ficou usável e para mim está ok, tendo resultados é o que importa.
 
 <center><img src="https://i.ibb.co/Vpp2jnnj/Screenshot-2025-10-21-at-12-31-41-Calisthenics-Pro-Performance-Tracker.png" width=60% /></center>
 
