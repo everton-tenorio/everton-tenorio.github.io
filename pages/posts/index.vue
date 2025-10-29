@@ -7,7 +7,7 @@
           <div>
             <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">Posts</h1>
             <p class="text-lg text-gray-600 dark:text-gray-300">
-              Dev & Tech Articles
+              Articles
             </p>
           </div>
           <NuxtLink 

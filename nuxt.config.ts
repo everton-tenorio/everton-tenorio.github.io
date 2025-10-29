@@ -4,9 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
   css: ['~/assets/css/tailwind.css'],
-  build: {
-    transpile: ['gray-matter']
-  },
+  //build: {
+  //  transpile: ['gray-matter']
+  //},
   vite: {
     build: {
       target: 'es2022'

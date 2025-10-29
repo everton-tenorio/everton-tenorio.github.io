@@ -3,7 +3,7 @@
   <NuxtLink
     v-if="post?.slug"
     :to="`/posts/${post.slug}`"
-    class="group block relative overflow-hidden rounded-2xl aspect-[16/9] shadow-lg hover:shadow-2xl transition-all duration-500"
+    class="group block relative overflow-hidden rounded-lg aspect-[4/3] transition-all duration-300 hover:scale-[1.02]"
   >
     <!-- Imagem de fundo -->
     <div class="absolute inset-0">
@@ -11,27 +11,48 @@
         v-if="post.bannerImage"
         :src="post.bannerImage"
         :alt="post.title"
-        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+        class="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-all duration-500"
         loading="lazy"
       />
-      <!-- Fallback caso não tenha imagem -->
+      <!-- Fallback minimalista -->
       <div
         v-else
-        class="w-full h-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500"
+        class="w-full h-full bg-neutral-100 dark:bg-neutral-800"
       />
     </div>
 
-    <!-- Overlay com gradiente -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-500" />
+    <!-- Overlay sutil -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
 
     <!-- Conteúdo -->
-    <div class="absolute inset-0 flex flex-col justify-end p-6">
-      <h2 class="text-2xl font-bold text-white mb-2 line-clamp-2 group-hover:text-blue-300 transition-colors duration-300">
+    <div class="absolute inset-0 flex flex-col justify-end p-4">
+      <!-- Tags -->
+      <div v-if="post.tags && post.tags.length > 0" class="flex flex-wrap gap-1.5 mb-2">
+        <span
+          v-for="tag in post.tags.slice(0, 3)"
+          :key="tag"
+          class="text-xs px-2 py-0.5 rounded bg-white/20 backdrop-blur-sm text-white border border-white/30 font-medium"
+        >
+          {{ tag }}
+        </span>
+      </div>
+
+      <!-- Título -->
+      <h3 class="text-base font-semibold text-white mb-1 line-clamp-2 leading-tight">
         {{ post.title }}
-      </h2>
-      <p class="text-sm text-gray-200 font-medium">
+      </h3>
+
+      <!-- Data -->
+      <p class="text-xs text-white/70 font-normal">
         {{ formatDate(post.date) }}
       </p>
+    </div>
+
+    <!-- Indicador de hover minimalista -->
+    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
     </div>
   </NuxtLink>
 </template>
@@ -49,7 +70,7 @@ defineProps<Props>()
 
 const formatDate = (dateString: string): string => {
   try {
-    return format(new Date(dateString), "dd 'de' MMM, yyyy", { locale: ptBR })
+    return format(new Date(dateString), "dd MMM yyyy", { locale: ptBR })
   } catch (error) {
     console.warn('Erro ao formatar data:', dateString)
     return dateString

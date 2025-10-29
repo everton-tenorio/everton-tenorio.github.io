@@ -1,6 +1,6 @@
 <!-- components/TechSkillsShowcase.vue -->
 <template>
-  <div class="relative bg-black py-20 px-4 overflow-hidden">
+  <div class="relative bg-black py-20 px-4 mb-[-90px] overflow-hidden">
     <!-- Matrix-style background -->
     <div class="absolute inset-0 opacity-5">
       <div 
@@ -10,7 +10,7 @@
     </div>
 
     <div class="max-w-6xl mx-auto relative">
-      <!-- System Status Header -->
+      <!-- System Status Header 
       <div class="mb-12 font-mono">
         <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-2 md:gap-0 mb-6 text-green-400 text-xs md:text-sm">
           <div class="flex items-center gap-4">
@@ -32,7 +32,7 @@
         <div class="text-gray-500 text-sm">
           [PROFILE: CREATIVE_PROBLEM_SOLVER]
         </div>
-      </div>
+      </div>-->
 
       <!-- Skills Matrix --
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">

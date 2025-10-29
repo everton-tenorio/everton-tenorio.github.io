@@ -1,6 +1,6 @@
 <!-- components/PhotoAlbums.vue -->
 <template>
-  <div class="bg-black py-20 px-4 mb-[-50px]">
+  <div class="bg-black py-20 px-4">
     <div class="max-w-7xl mx-auto">
       <!-- Header 
       <div class="mb-12 text-center">
