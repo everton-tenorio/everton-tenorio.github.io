@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as t,a as n,$ as c}from"./RYxVkBNp.js";const o={},r={class:"min-h-screen text-gray-900 bg-[#000000]"};function d(e,_){return t(),s("div",r,[n("main",null,[c(e.$slots,"default",{},void 0)])])}const f=a(o,[["render",d],["__scopeId","data-v-ad829561"]]);export{f as default};
