@@ -210,6 +210,7 @@ const albums = ref<Album[]>([
         'https://i.ibb.co/bgHJHFLd/IMG-20190216-112522.jpg',
         'https://i.ibb.co/kVRHkPh1/IMG-20190214-212141.jpg',
         'https://i.ibb.co/WWhpQLk2/IMG-20190213-102603.jpg',
+        'https://i.ibb.co/zhSyZh26/5a3fd763-7f1c-4584-a0a2-2ed1fc5a451d-20251028-211905-0000-1.jpg',
         'https://i.ibb.co/XfwT7fbc/IMG-20190213-124719.jpg',
         'https://i.ibb.co/G4fSZ31N/IMG-20190211-092743.jpg',
         'https://i.ibb.co/0yvbKPhM/IMG-20190213-122003.jpg',
