@@ -20,7 +20,7 @@
         
         <div class="about-content">
           <p class="about-text">
-            <br>Crio soluções criativas pra resolver problemas reais e 
+            <br>Crio soluções pra resolver problemas reais e 
             escrevo sobre isso.
           </p>
           
