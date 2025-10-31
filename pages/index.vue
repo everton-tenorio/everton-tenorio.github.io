@@ -153,10 +153,10 @@ useHead({
 
 const projectsData = [
     {
-    id: 'gestormei',
-    name: 'GestorMEI',
-    description: 'Os MEIs representam mais de 50% das empresas ativas no Brasil, com 11 milhões de registros. Com o GestorMEI, você controla vendas, estoque, despesas e acompanha seu limite de faturamento anual (R$ 81 mil) em tempo real. Gerencie seu negócio de forma simples, evite desenquadramento e tome decisões inteligentes com dashboards completos.',
-    image: '/images/projects/gestormei.png',
+    id: 'nmei',
+    name: 'nMEI',
+    description: 'Os MEIs representam mais de 50% das empresas ativas no Brasil, com 11 milhões de registros. Com o nMEI, você controla vendas, estoque, despesas e acompanha seu limite de faturamento anual (R$ 81 mil) em tempo real. Gerencie seu negócio de forma simples, evite desenquadramento e tome decisões inteligentes com dashboards completos.',
+    image: '/images/projects/nmei.png',
     tech: ['MEI', 'Empreendedorismo'],
     links: {
       website: 'https://root-techlab.github.io'
