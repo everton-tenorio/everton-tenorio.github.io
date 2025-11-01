@@ -159,7 +159,7 @@ const projectsData = [
     image: '/images/projects/nMEI.png',
     tech: ['MEI', 'Empreendedorismo'],
     links: {
-      website: 'https://root-techlab.github.io'
+      website: 'https://nmei.vercel.app/'
     }
   },
   {
