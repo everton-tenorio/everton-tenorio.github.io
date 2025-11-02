@@ -2,16 +2,6 @@
 <template>
   <div class="bg-black py-20 px-4">
     <div class="max-w-7xl mx-auto">
-      <!-- Header 
-      <div class="mb-12 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          Projects Gallery
-        </h2>
-        <p class="text-gray-400 text-lg">
-          Explore visual stories from my work
-        </p>
-      </div>-->
-
       <!-- Albums Grid - Masonry Style -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         <div
@@ -79,14 +69,59 @@
               </p>
             </div>
 
-            <!-- Main Image -->
-            <div class="relative bg-gray-900 rounded-lg overflow-hidden mb-4 aspect-video">
-              <img
-                :src="currentAlbum?.images[currentImageIndex]"
-                :alt="`Image ${currentImageIndex + 1}`"
-                class="w-full h-full object-contain"
-              />
+            <!-- Main Image Container -->
+            <div class="relative bg-gray-900 rounded-lg overflow-hidden mb-4">
+              <!-- Image -->
+              <div class="aspect-video">
+                <img
+                  :src="currentImage?.url"
+                  :alt="currentImage?.caption || `Image ${currentImageIndex + 1}`"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+
+              <!-- Caption Overlay (aparece sobre a imagem) -->
+              <Transition name="caption">
+                <div
+                  v-if="currentImage?.caption && showCaption"
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent p-6 pt-12"
+                >
+                  <p class="text-white text-sm md:text-base leading-relaxed max-w-3xl">
+                    {{ currentImage.caption }}
+                  </p>
+                  <div v-if="currentImage.location || currentImage.date" class="flex items-center gap-4 mt-3 text-xs text-gray-400">
+                    <span v-if="currentImage.location" class="flex items-center gap-1">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      {{ currentImage.location }}
+                    </span>
+                    <span v-if="currentImage.date" class="flex items-center gap-1">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                      </svg>
+                      {{ currentImage.date }}
+                    </span>
+                  </div>
+                </div>
+              </Transition>
               
+              <!-- Toggle Caption Button (apenas se existir legenda) -->
+              <button
+                v-if="currentImage?.caption"
+                @click="showCaption = !showCaption"
+                class="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all z-10"
+                :title="showCaption ? 'Ocultar legenda' : 'Mostrar legenda'"
+              >
+                <svg v-if="!showCaption" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </button>
+
               <!-- Navigation Arrows -->
               <button
                 v-if="currentImageIndex > 0"
@@ -109,7 +144,7 @@
               </button>
 
               <!-- Image Counter -->
-              <div class="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-mono">
+              <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-mono">
                 {{ currentImageIndex + 1 }} / {{ currentAlbum?.images.length }}
               </div>
             </div>
@@ -119,15 +154,24 @@
               <div
                 v-for="(image, index) in currentAlbum?.images"
                 :key="index"
-                @click="currentImageIndex = index"
-                class="flex-shrink-0 cursor-pointer transition-all duration-300 rounded overflow-hidden"
+                @click="selectImage(index)"
+                class="relative flex-shrink-0 cursor-pointer transition-all duration-300 rounded overflow-hidden"
                 :class="currentImageIndex === index ? 'ring-2 ring-white scale-105' : 'opacity-50 hover:opacity-100'"
               >
                 <img
-                  :src="image"
-                  :alt="`Thumbnail ${index + 1}`"
+                  :src="image.url"
+                  :alt="image.caption || `Thumbnail ${index + 1}`"
                   class="w-20 h-20 object-cover"
                 />
+                <!-- Indicador de legenda na thumbnail -->
+                <div
+                  v-if="image.caption"
+                  class="absolute bottom-1 right-1 bg-black/70 rounded-full p-1"
+                >
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -140,12 +184,19 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
+interface ImageData {
+  url: string
+  caption?: string
+  location?: string
+  date?: string
+}
+
 interface Album {
   id: number
   title: string
   description: string
   cover: string
-  images: string[]
+  images: ImageData[]
   size: string
   ratio: string
 }
@@ -153,19 +204,40 @@ interface Album {
 const isModalOpen = ref(false)
 const currentAlbumIndex = ref(0)
 const currentImageIndex = ref(0)
+const showCaption = ref(true)
 
-// Álbuns com imagens públicas do Unsplash
+// Exemplo de álbuns com legendas
 const albums = ref<Album[]>([
   {
     id: 1,
-    title: '24/25 - Building',
+    title: 'Construindo',
     description: 'posto mais em breve',
     cover: 'https://i.ibb.co/d4HKMHvq/IMG-20251004-221443-478.jpg',
     images: [
-      'https://i.ibb.co/d4HKMHvq/IMG-20251004-221443-478.jpg',
-      'https://i.ibb.co/p6mpg0Rn/daa92e70-ab80-4f4d-abc6-63b764433093-20251005-223102-0000.jpg',
-      'https://i.ibb.co/1JMBwVzn/d1f81d38-cebb-4610-a3a5-7e5631f33258-20251005-222330-0000.jpg',
-      'https://i.ibb.co/0ySXb7WF/IMG-20251005-150609-083.jpg'
+      {
+        url: 'https://i.ibb.co/d4HKMHvq/IMG-20251004-221443-478.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://i.ibb.co/p6mpg0Rn/daa92e70-ab80-4f4d-abc6-63b764433093-20251005-223102-0000.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://i.ibb.co/1JMBwVzn/d1f81d38-cebb-4610-a3a5-7e5631f33258-20251005-222330-0000.jpg',
+        caption: 'Redes?',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://i.ibb.co/0ySXb7WF/IMG-20251005-150609-083.jpg',
+        caption: 'Aquela clássica, da tela',
+        location: '',
+        date: ''
+      }
     ],
     size: 'col-span-2 row-span-2',
     ratio: '1/1'
@@ -203,17 +275,79 @@ const albums = ref<Album[]>([
     description: 'CPBR12',
     cover: 'https://i.ibb.co/bgHJHFLd/IMG-20190216-112522.jpg',
     images: [
-        'https://i.ibb.co/Kxy1xtnH/IMG-20251005-012559-866.webp',
-        'https://i.ibb.co/GfSZ3Mwg/IMG-20190214-165324.jpg',
-        'https://i.ibb.co/ccj5nvPy/IMG-20190214-150438.jpg',
-        'https://i.ibb.co/4R9HfFrg/IMG-20190216-120216.jpg',
-        'https://i.ibb.co/bgHJHFLd/IMG-20190216-112522.jpg',
-        'https://i.ibb.co/kVRHkPh1/IMG-20190214-212141.jpg',
-        'https://i.ibb.co/WWhpQLk2/IMG-20190213-102603.jpg',
-        'https://i.ibb.co/XfwT7fbc/IMG-20190213-124719.jpg',
-        'https://i.ibb.co/G4fSZ31N/IMG-20190211-092743.jpg',
-        'https://i.ibb.co/0yvbKPhM/IMG-20190213-122003.jpg',
-        'https://i.ibb.co/j90CsX3G/IMG-20190213-134152.jpg'
+      {
+        url: 'https://i.ibb.co/Kxy1xtnH/IMG-20251005-012559-866.webp',
+        caption: 'Campus Party',
+        location: 'São Paulo',
+        date: ''
+      },        
+      {
+        url: 'https://i.ibb.co/GfSZ3Mwg/IMG-20190214-165324.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      },     
+      {
+        url: 'https://i.ibb.co/ccj5nvPy/IMG-20190214-150438.jpg',
+        caption: 'Desenvolvendo uma aplicação com k8s e Nodejs',
+        location: 'São Paulo',
+        date: ''
+      },
+        
+      {
+        url: 'https://i.ibb.co/4R9HfFrg/IMG-20190216-120216.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      },
+        
+      {
+        url: 'https://i.ibb.co/bgHJHFLd/IMG-20190216-112522.jpg',
+        caption: 'A Divina Comédia Tecnológica',
+        location: '',
+        date: ''
+      },
+        
+      {
+        url: 'https://i.ibb.co/kVRHkPh1/IMG-20190214-212141.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      },
+        
+      {
+        url: 'https://i.ibb.co/WWhpQLk2/IMG-20190213-102603.jpg',
+        caption: 'Expo Center Norte',
+        location: 'Vila Guilherme - São Paulo',
+        date: ''
+      },
+        
+      {
+        url: 'https://i.ibb.co/XfwT7fbc/IMG-20190213-124719.jpg',
+        caption: 'O Café e a Economia Paulista',
+        location: 'B3 - Praça Antônio Prado - Centro, São Paulo',
+        date: ''
+      },
+        
+      {
+        url: 'https://i.ibb.co/G4fSZ31N/IMG-20190211-092743.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      },
+        
+      {
+        url: 'https://i.ibb.co/0yvbKPhM/IMG-20190213-122003.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://i.ibb.co/j90CsX3G/IMG-20190213-134152.jpg',
+        caption: 'Selva de pedra',
+        location: 'Farol Santander - São Paulo',
+        date: ''
+      }
     ],
     size: 'md:col-span-2',
     ratio: '3/4'
@@ -234,10 +368,12 @@ const albums = ref<Album[]>([
 ])
 
 const currentAlbum = computed(() => albums.value[currentAlbumIndex.value])
+const currentImage = computed(() => currentAlbum.value?.images[currentImageIndex.value])
 
 const openAlbum = (index: number) => {
   currentAlbumIndex.value = index
   currentImageIndex.value = 0
+  showCaption.value = true
   isModalOpen.value = true
   document.body.style.overflow = 'hidden'
 }
@@ -247,15 +383,22 @@ const closeModal = () => {
   document.body.style.overflow = ''
 }
 
+const selectImage = (index: number) => {
+  currentImageIndex.value = index
+  showCaption.value = true
+}
+
 const nextImage = () => {
   if (currentImageIndex.value < (currentAlbum.value?.images.length || 0) - 1) {
     currentImageIndex.value++
+    showCaption.value = true
   }
 }
 
 const prevImage = () => {
   if (currentImageIndex.value > 0) {
     currentImageIndex.value--
+    showCaption.value = true
   }
 }
 
@@ -265,6 +408,7 @@ const handleKeydown = (e: KeyboardEvent) => {
   if (e.key === 'Escape') closeModal()
   if (e.key === 'ArrowRight') nextImage()
   if (e.key === 'ArrowLeft') prevImage()
+  if (e.key === 'c' || e.key === 'C') showCaption.value = !showCaption.value
 }
 
 if (process.client) {
@@ -282,6 +426,18 @@ if (process.client) {
 .modal-enter-from,
 .modal-leave-to {
   opacity: 0;
+}
+
+/* Caption Transitions */
+.caption-enter-active,
+.caption-leave-active {
+  transition: all 0.4s ease;
+}
+
+.caption-enter-from,
+.caption-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* Scrollbar */
