@@ -355,12 +355,27 @@ const albums = ref<Album[]>([
   {
     id: 3,
     title: 'Campus Party Natal - 2018',
-    description: 'CPBR11',
+    description: 'CPBR11 - Buscando mais fotos.',
     cover: 'https://i.ibb.co/NdP51wvk/IMG-20180411-200612.jpg',
     images: [
-      'https://i.ibb.co/NdP51wvk/IMG-20180411-200612.jpg',
-      'https://i.ibb.co/q3KcwBsJ/48-C7740-E-2022-4-F5-B-902-F-853-D273-BA1-CC.jpg',
-      'https://i.ibb.co/kss4Z3H0/4-E838-B78-40-D6-4249-BA79-EC53-F55-D25-F9.jpg',
+      {
+        url: 'https://i.ibb.co/NdP51wvk/IMG-20180411-200612.jpg',
+        caption: 'Primeira Campus',
+        location: 'Natal',
+        date: ''
+      },
+      {
+        url: 'https://i.ibb.co/q3KcwBsJ/48-C7740-E-2022-4-F5-B-902-F-853-D273-BA1-CC.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://i.ibb.co/kss4Z3H0/4-E838-B78-40-D6-4249-BA79-EC53-F55-D25-F9.jpg',
+        caption: '',
+        location: '',
+        date: ''
+      }
     ],
     size: '',
     ratio: '3/4'
