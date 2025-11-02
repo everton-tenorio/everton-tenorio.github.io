@@ -4,7 +4,7 @@ date: 2025-06-9
 slug: criando-secrets-com-openssl
 description: ""
 tags: ["openssl", "secrets", "bash"]
-bannerImage: "https://i.ibb.co/qLZS8FZV/openssl.png"
+bannerImage: "https://i.ibb.co/6R2KpTSx/openssl.png"
 ---
 
 Eu já sabia que era possível gerar valores aleatórios com openssl, mas uma resposta qualquer
