@@ -1,21 +1,21 @@
 <template>
   <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
     <!-- Header -->
-    <div class="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
+    <div class="bg-black text-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
       <div class="max-w-6xl mx-auto px-4 py-8 md:px-8">
         <div class="flex items-center justify-between">
           <div>
-            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">Posts</h1>
+            <h1 class="text-4xl font-bold text-gray-400 dark:text-white mb-2">Posts</h1>
             <p class="text-lg text-gray-600 dark:text-gray-300">
-              Articles
+              everton.sh
             </p>
           </div>
           <NuxtLink 
-            to="/" 
-            class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
-          >
-            ← Everton T...
-          </NuxtLink>
+              to="/" 
+              class="inline-flex items-center px-6 py-3 bg-[#1f2123] text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              ← Home
+            </NuxtLink>
         </div>
       </div>
     </div>
