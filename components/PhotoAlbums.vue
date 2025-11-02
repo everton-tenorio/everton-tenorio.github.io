@@ -355,7 +355,7 @@ const albums = ref<Album[]>([
   {
     id: 3,
     title: 'Campus Party Natal - 2018',
-    description: 'CPBR11 - Buscando mais fotos.',
+    description: 'CPBR11',
     cover: 'https://i.ibb.co/NdP51wvk/IMG-20180411-200612.jpg',
     images: [
       {
