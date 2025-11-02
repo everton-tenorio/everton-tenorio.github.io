@@ -11,7 +11,7 @@ tags: [
   "hands-on devops challenges"
 ]
 
-bannerImage: "https://media.licdn.com/dms/image/v2/D4D22AQEhwJTbBzMZHg/feedshare-shrink_1280/B4DZaNB9iyG0Ak-/0/1746122830521?e=1751500800&v=beta&t=j1vaME2pSZNnFvpy6oqtlj48r6h7rzqL4Fazp2TcP60"
+bannerImage: "/images/projects/devopsdiary.png"
 ---
 
 Conceived a few weeks ago, **#DevOpsDiary** is an open-source project inspired by existing platforms, but with an exclusive focus on **#DevOps**. This is the first version of the initiative, designed to offer a practical and structured approach to learning in the field.
