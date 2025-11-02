@@ -1,6 +1,6 @@
 const e=`---
 title: "DevOps Newsletter"
-date: 2025-05-31
+date: 2025-11-03
 slug: devops-newsletter
 description: ""
 tags: ["devops"]
@@ -18,5 +18,5 @@ Note: This list will be continuously updated to make it as complete as possible.
 - **Kubernetes**: [https://www.cncf.io/kubeweekly/](https://www.cncf.io/kubeweekly/)
 - **Ansible**: [https://www.redhat.com/en/blog/channel/red-hat-ansible-automation](https://www.redhat.com/en/blog/channel/red-hat-ansible-automation)
 - **Owasp DevSecOps Guideline**: [https://owasp.org/www-project-devsecops-guideline/](https://owasp.org/www-project-devsecops-guideline/)
-
+- **DevOpsDiary**: [DevOps in practice](https://devopsdiary.site)
 `;export{e as default};
