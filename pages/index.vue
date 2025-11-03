@@ -169,7 +169,7 @@ const projectsData = [
     image: '/images/projects/devopsdiary.png',
     tech: ['DevOps'],
     links: {
-      github: 'https://github.com/everton-tenorio/devopsdiary',
+      // github: 'https://github.com/everton-tenorio/devopsdiary',
       website: 'https://devopsdiary.site'
     }
   },
