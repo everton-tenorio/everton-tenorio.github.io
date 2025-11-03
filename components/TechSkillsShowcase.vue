@@ -10,164 +10,55 @@
     </div>
 
     <div class="max-w-6xl mx-auto relative">
-      <!-- System Status Header 
-      <div class="mb-12 font-mono">
-        <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-2 md:gap-0 mb-6 text-green-400 text-xs md:text-sm">
-          <div class="flex items-center gap-4">
-            <span class="animate-pulse">█</span>
-            <span>SYSTEM_STATUS: <span class="text-white">OPERATIONAL</span></span>
+      <!-- macOS Terminal Window -->
+      <div class="bg-[#0f0f0f] border border-[#2d2d2d] rounded-lg overflow-hidden shadow-2xl">
+        <!-- macOS Window Controls -->
+        <div class="bg-[#2d2d2d] px-4 py-3 flex items-center gap-2 border-b border-[#1a1a1a]">
+          <div class="flex gap-2">
+            <div class="w-3 h-3 rounded-full bg-[#ff5f57] hover:bg-[#ff5f57]/80 transition-colors"></div>
+            <div class="w-3 h-3 rounded-full bg-[#febc2e] hover:bg-[#febc2e]/80 transition-colors"></div>
+            <div class="w-3 h-3 rounded-full bg-[#28c840] hover:bg-[#28c840]/80 transition-colors"></div>
           </div>
-          <div class="flex items-center gap-4">
-            <span>UPTIME: <span class="text-white">{{ uptime }}</span></span>
-            <span class="flex items-center gap-2">
-              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              ONLINE
-            </span>
-          </div>
-        </div>
-        
-        <div class="text-1xl md:text-3xl lg:text-3xl text-white font-bold mb-2 tracking-tight">
-          <span class="text-green-400">&gt;</span> evttenorio@outlook.com
-        </div>
-        <div class="text-gray-500 text-sm">
-          [PROFILE: CREATIVE_PROBLEM_SOLVER]
-        </div>
-      </div>-->
-
-      <!-- Skills Matrix --
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
-        <=!-- Terminal 1: Core Stack --
-        <div class="bg-[#0e0e0e] border border-gray-800 rounded-lg overflow-hidden shadow-2xl">
-          <div class="bg-black px-4 py-2 flex items-center gap-2 border-b border-gray-700">
-            <div class="flex gap-1.5">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-            <span class="text-gray-400 text-xs font-mono ml-2">core_stack.sh</span>
-          </div>
-          <div class="p-4 font-mono text-sm">
-            <div v-for="(skill, index) in coreStack" :key="skill.name" class="mb-3">
-              <div class="text-gray-500 text-xs mb-1"># {{ skill.name }}</div>
-              <div class="flex items-center gap-2">
-                <span class="text-green-400">$</span>
-                <span class="text-gray-300">{{ skill.command }}</span>
-              </div>
-              <div class="flex items-center gap-2 mt-1">
-                <div class="flex-1 bg-gray-800 rounded-full h-1.5 overflow-hidden">
-                  <div 
-                    class="h-full bg-gradient-to-r from-green-500 to-emerald-400 transition-all duration-1000"
-                    :style="{ width: isVisible ? `${skill.level}%` : '0%' }"
-                  ></div>
-                </div>
-                <span class="text-green-400 text-xs">{{ skill.level }}%</span>
-              </div>
-            </div>
-          </div>
+          <span class="text-gray-400 text-xs font-medium ml-2">zsh</span>
         </div>
 
-        <!=-- Terminal 2: Infrastructure --
-        <div class="bg-[#0e0e0e] border border-gray-800 rounded-lg overflow-hidden shadow-2xl">
-          <div class="bg-black px-4 py-2 flex items-center gap-2 border-b border-gray-700">
-            <div class="flex gap-1.5">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-            <span class="text-gray-400 text-xs font-mono ml-2">infrastructure.sh</span>
+        <!-- Terminal Content -->
+        <div class="p-6 font-mono text-sm min-h-[400px]">
+          <!-- Command Line -->
+          <div class="mb-4">
+            <span class="text-[#5af78e]">everton@techlab</span>
+            <span class="text-white">:</span>
+            <span class="text-[#57c7ff]">~</span>
+            <span class="text-white"> $ </span>
+            <span class="text-white">{{ typedCommand }}</span>
+            <span v-if="showCursor && !commandExecuted" class="text-white animate-pulse">▊</span>
           </div>
-          <div class="p-4 font-mono text-sm">
-            <div v-for="(skill, index) in infrastructure" :key="skill.name" class="mb-3">
-              <div class="text-gray-500 text-xs mb-1"># {{ skill.name }}</div>
-              <div class="flex items-center gap-2">
-                <span class="text-blue-400">$</span>
-                <span class="text-gray-300">{{ skill.command }}</span>
-              </div>
-              <div class="flex items-center gap-2 mt-1">
-                <div class="flex-1 bg-gray-800 rounded-full h-1.5 overflow-hidden">
-                  <div 
-                    class="h-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-1000"
-                    :style="{ width: isVisible ? `${skill.level}%` : '0%' }"
-                  ></div>
-                </div>
-                <span class="text-blue-400 text-xs">{{ skill.level }}%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
 
-      <!-- System Logs / About -->
-      <div class="bg-[#0e0e0e] border border-gray-800 rounded-lg overflow-hidden shadow-2xl">
-        <div class="bg-black px-4 py-2 flex items-center gap-2 border-b border-gray-700">
-          <div class="flex gap-1.5">
-            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-          </div>
-          <span class="text-gray-400 text-xs font-mono ml-2">system_profile.log</span>
-        </div>
-        <div class="p-4 md:p-6 font-mono text-xs md:text-sm">
-          <div class="space-y-2">
-            <div class="flex items-start gap-3">
-              <span class="text-gray-600 text-xs mt-0.5">{{ formatTime(0) }}</span>
+          <!-- Log Output -->
+          <div v-if="commandExecuted" class="space-y-1">
+            <div 
+              v-for="(line, index) in visibleLines" 
+              :key="index"
+              class="flex items-start gap-3"
+            >
+              <span class="text-gray-600 text-xs mt-0.5 select-none">{{ line.time }}</span>
               <div class="flex-1">
-                <span class="text-green-400">[INFO]</span>
-                <span class="text-[#01fa23] ml-2">Building scalable web applications with modern frameworks</span>
+                <span :class="getLogTypeColor(line.type)">[{{ line.type }}]</span>
+                <span class="text-gray-300 ml-2">{{ line.text }}</span>
               </div>
             </div>
-            <div class="flex items-start gap-3">
-              <span class="text-gray-600 text-xs mt-0.5">{{ formatTime(1) }}</span>
-              <div class="flex-1">
-                <span class="text-blue-400">[DEVOPS]</span>
-                <span class="text-[#01fa23] ml-2">Automating deployment pipelines and infrastructure as code</span>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-gray-600 text-xs mt-0.5">{{ formatTime(2) }}</span>
-              <div class="flex-1">
-                <span class="text-yellow-400">[SECURITY]</span>
-                <span class="text-[#01fa23] ml-2">Some notion is necessary</span>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-gray-600 text-xs mt-0.5">{{ formatTime(3) }}</span>
-              <div class="flex-1">
-                <span class="text-white">[CREATIVE]</span>
-                <span class="text-[#01fa23] ml-2">Breaking conventional solutions with innovative approaches</span>
-              </div>
-            </div>
-            <div class="flex items-start gap-3 mt-4">
-              <span class="text-gray-600 text-xs mt-0.5">{{ formatTime(4) }}</span>
-              <div class="flex-1">
-                <span class="text-green-400">[STATUS]</span>
-                <span class="text-[#01fa23] ml-2 font-bold">Ready for production environments</span>
-                <span class="text-green-400 animate-pulse ml-2">▊</span>
-              </div>
+
+            <!-- Cursor after logs -->
+            <div v-if="allLinesVisible" class="mt-4">
+              <span class="text-[#5af78e]">everton@techlab</span>
+              <span class="text-white">:</span>
+              <span class="text-[#57c7ff]">~</span>
+              <span class="text-white"> $ </span>
+              <span class="text-white animate-pulse">▊</span>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Stats Footer 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 font-mono text-xs">
-        <div class="bg-gray-900 border border-gray-800 rounded p-4">
-          <div class="text-gray-500 mb-1">PROJECTS_DEPLOYED</div>
-          <div class="text-2xl text-green-400 font-bold">{{ stats.projects }}+</div>
-        </div>
-        <div class="bg-gray-900 border border-gray-800 rounded p-4">
-          <div class="text-gray-500 mb-1">CODE_COMMITS</div>
-          <div class="text-2xl text-blue-400 font-bold">{{ stats.commits }}+</div>
-        </div>
-        <div class="bg-gray-900 border border-gray-800 rounded p-4">
-          <div class="text-gray-500 mb-1">COFFEE_CONSUMED</div>
-          <div class="text-2xl text-yellow-400 font-bold">{{ stats.coffee }}L</div>
-        </div>
-        <div class="bg-gray-900 border border-gray-800 rounded p-4">
-          <div class="text-gray-500 mb-1">BUGS_FIXED</div>
-          <div class="text-2xl text-purple-400 font-bold">{{ stats.bugs }}+</div>
-        </div>
-      </div>-->
     </div>
 
     <!-- Scanline effect -->
@@ -180,59 +71,98 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const isVisible = ref(false)
-const uptime = ref('00:00:00')
-let interval: NodeJS.Timeout | null = null
-
-const coreStack = [
-  { name: 'Vue.js & Nuxt', command: 'npm run build --production', level: 75 },
-  { name: 'Python', command: 'python3 manage.py runserver', level: 85 },
-  { name: 'JavaScript/TypeScript', command: 'tsc --strict --noEmit', level: 50 }
-]
-
-const infrastructure = [
-  { name: 'Linux System Administration', command: 'systemctl status nginx', level: 85 },
-  { name: 'Docker & Containerization', command: 'docker-compose up -d --scale', level: 85 },
-  { name: 'CI/CD Pipelines', command: 'gh workflow run deploy.yml', level: 75 },
-  { name: 'AWS Cloud Services', command: 'aws cloudformation deploy', level: 75 },
-  { name: 'Security', command: 'nmap -sS -sV --script vuln', level: 51 }
-]
-
-const stats = ref({
-  projects: 50,
-  commits: 1000,
-  coffee: 9999,
-  bugs: 500
-})
-
-const formatTime = (offset: number) => {
-  const now = new Date()
-  now.setSeconds(now.getSeconds() + offset)
-  return now.toTimeString().split(' ')[0]
+interface LogLine {
+  time: string
+  type: string
+  text: string
 }
 
-const updateUptime = () => {
-  const start = new Date()
-  start.setHours(9, 0, 0)
+const typedCommand = ref('')
+const commandExecuted = ref(false)
+const showCursor = ref(true)
+const visibleLines = ref<LogLine[]>([])
+const allLinesVisible = ref(false)
+
+const fullCommand = 'cat /var/log/system_profile.log'
+
+const getCurrentTime = () => {
   const now = new Date()
-  const diff = Math.abs(now.getTime() - start.getTime())
-  const hours = Math.floor(diff / 3600000)
-  const minutes = Math.floor((diff % 3600000) / 60000)
-  const seconds = Math.floor((diff % 60000) / 1000)
-  uptime.value = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+  return now.toTimeString().split(' ')[0] // Returns HH:MM:SS
+}
+
+const generateLogLines = (): LogLine[] => {
+  const baseTime = new Date()
+  return [
+    { time: getCurrentTime(), type: 'INFO', text: 'Building scalable web applications with modern frameworks' },
+    { time: new Date(baseTime.getTime() + 1000).toTimeString().split(' ')[0], type: 'DEVOPS', text: 'Automating deployment pipelines and infrastructure as code' },
+    { time: new Date(baseTime.getTime() + 2000).toTimeString().split(' ')[0], type: 'SECURITY', text: 'Implementing secure authentication and authorization flows' },
+    { time: new Date(baseTime.getTime() + 3000).toTimeString().split(' ')[0], type: 'CREATIVE', text: 'Breaking conventional solutions with innovative approaches' },
+    { time: new Date(baseTime.getTime() + 4000).toTimeString().split(' ')[0], type: 'STATUS', text: 'Ready for production environments ✓' }
+  ]
+}
+
+const logLines = generateLogLines()
+
+const getLogTypeColor = (type: string) => {
+  const colors: Record<string, string> = {
+    INFO: 'text-[#5af78e]',
+    DEVOPS: 'text-[#57c7ff]',
+    SECURITY: 'text-[#ff6b6b]',
+    CREATIVE: 'text-[#ffd866]',
+    STATUS: 'text-[#5af78e]'
+  }
+  return colors[type] || 'text-gray-400'
+}
+
+let typingTimeout: NodeJS.Timeout | null = null
+let executionTimeout: NodeJS.Timeout | null = null
+let lineTimeouts: NodeJS.Timeout[] = []
+
+const typeCommand = () => {
+  let currentIndex = 0
+  
+  const typeNextChar = () => {
+    if (currentIndex < fullCommand.length) {
+      typedCommand.value += fullCommand[currentIndex]
+      currentIndex++
+      typingTimeout = setTimeout(typeNextChar, 80 + Math.random() * 40)
+    } else {
+      // Command typed, wait a bit then execute
+      executionTimeout = setTimeout(() => {
+        commandExecuted.value = true
+        showLogs()
+      }, 500)
+    }
+  }
+  
+  typeNextChar()
+}
+
+const showLogs = () => {
+  logLines.forEach((line, index) => {
+    const timeout = setTimeout(() => {
+      visibleLines.value.push(line)
+      
+      if (index === logLines.length - 1) {
+        allLinesVisible.value = true
+      }
+    }, index * 400)
+    
+    lineTimeouts.push(timeout)
+  })
 }
 
 onMounted(() => {
-  setTimeout(() => {
-    isVisible.value = true
-  }, 100)
-  
-  updateUptime()
-  interval = setInterval(updateUptime, 1000)
+  // Start typing after a short delay
+  typingTimeout = setTimeout(() => {
+    typeCommand()
+  }, 800)
 })
 
 onUnmounted(() => {
-  if (interval) clearInterval(interval)
+  if (typingTimeout) clearTimeout(typingTimeout)
+  if (executionTimeout) clearTimeout(executionTimeout)
+  lineTimeouts.forEach(timeout => clearTimeout(timeout))
 })
 </script>
 
@@ -252,10 +182,29 @@ onUnmounted(() => {
 
 @keyframes pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  50% { opacity: 0; }
 }
 
 .animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar for terminal feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d3d3d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d;
 }
 </style>
