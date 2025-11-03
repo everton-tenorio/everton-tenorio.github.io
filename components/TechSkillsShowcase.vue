@@ -95,7 +95,7 @@ const generateLogLines = (): LogLine[] => {
   return [
     { time: getCurrentTime(), type: 'INFO', text: 'Building scalable web applications with modern frameworks' },
     { time: new Date(baseTime.getTime() + 1000).toTimeString().split(' ')[0], type: 'DEVOPS', text: 'Automating deployment pipelines and infrastructure as code' },
-    { time: new Date(baseTime.getTime() + 2000).toTimeString().split(' ')[0], type: 'SECURITY', text: 'Implementing secure authentication and authorization flows' },
+    { time: new Date(baseTime.getTime() + 2000).toTimeString().split(' ')[0], type: 'SECURITY', text: 'Implementing security best practices across all layers' },
     { time: new Date(baseTime.getTime() + 3000).toTimeString().split(' ')[0], type: 'CREATIVE', text: 'Breaking conventional solutions with innovative approaches' },
     { time: new Date(baseTime.getTime() + 4000).toTimeString().split(' ')[0], type: 'STATUS', text: 'Ready for production environments ✓' }
   ]
