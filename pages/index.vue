@@ -174,6 +174,16 @@ const projectsData = [
     }
   },
   {
+    id: 'precofipe',
+    name: 'Preço Fipe',
+    description: ' Preços médios de veículos diretamente da FIPE.',
+    image: '/images/projects/precofipe.png',
+    tech: ['FIPE'],
+    links: {
+      website: 'https://preco-fipe.vercel.app/'
+    }
+  },
+  {
     id: 'portalfut',
     name: 'Portalfut - Agregador de notícias de futebol',
     description: 'Acompanhe as principais notícias de futebol e confira a agenda dos jogos.',
