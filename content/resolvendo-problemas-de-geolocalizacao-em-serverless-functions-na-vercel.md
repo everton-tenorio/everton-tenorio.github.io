@@ -4,7 +4,7 @@ date: 2025-11-09
 slug: resolvendo-problemas-de-geolocalizacao-em-serverless-functions-na-vercel
 description: ""
 tags: ["vercel", "geo-blocking", "serveless functions"]
-bannerImage: "https://i.ibb.co/fzS1w35j/geoblocking-vercel.png"
+bannerImage: "https://i.ibb.co/gpkKYMw/geoblocking-vercel.png"
 ---
 
 Ao desenvolver APIs que consomem conteúdo de plataformas de mídia, você pode encontrar uma inconsistência entre ambiente local e produção que não se enquadram nos problemas usuais (CORS, rate limiting, autenticação, etc.). A causa pode ser restrição geográfica de conteúdo.
