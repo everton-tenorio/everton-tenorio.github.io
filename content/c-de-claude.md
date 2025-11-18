@@ -1,6 +1,6 @@
 ---
 title: "C de Claude"
-date: 2025-10-27
+date: 2025-10-24
 slug: c-de-claude
 description: ""
 tags: ["C", "claude", "sockets", "threads", "devops"]
