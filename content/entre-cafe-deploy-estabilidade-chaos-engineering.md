@@ -1,10 +1,10 @@
 ---
 title: "Estabilidade é rara, até mesmo nos melhores sistemas."
-date: 2025-09-06
+date: 2025-10-27
 slug: entre-cafe-deploy-estabilidade-chaos-engineering
 description: ""
 tags: ["chaos-engineering", "devops", "sre", "resiliencia"]
-bannerImage: "https://i.ibb.co/ymh80s7N/chaos-eng-netflix.png"
+bannerImage: "https://i.ibb.co/4nvZ9dmg/chaosmonkey.png"
 ---
 No mundo da infraestrutura, falamos de **uptime**, **monitoramento contínuo**, **clusters**, **tolerância a falhas**. Investimos em redundância, replicação e backups porque sabemos que a queda é uma questão de '*quando*', não de '*se*'. 
 
