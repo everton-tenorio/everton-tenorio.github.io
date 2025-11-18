@@ -1,6 +1,6 @@
 const e=`---
 title: "C de Claude"
-date: 2025-10-27
+date: 2025-10-24
 slug: c-de-claude
 description: ""
 tags: ["C", "claude", "sockets", "threads", "devops"]
@@ -23,4 +23,5 @@ Posteriormente vou criar as funções em código, implementar threads, e com bas
 - Não pode vazar memória, zero memory leaks no Valgrind
 - Debugging prático
 
-Tudo organizado, agora é ler, testar e concluir, flw.`;export{e as default};
+Tudo organizado, agora é ler, testar e concluir, flw.
+`;export{e as default};
