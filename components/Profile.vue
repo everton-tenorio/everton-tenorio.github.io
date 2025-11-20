@@ -4,7 +4,7 @@
       <!-- Foto de Perfil -->
       <img
         class="profile-image"
-        src="https://media.licdn.com/dms/image/v2/D4D03AQF_sI9GKxjLsQ/profile-displayphoto-crop_800_800/B4DZnAo7HTJEAM-/0/1759873578064?e=1763596800&v=beta&t=yt6QJ9VEEAjXzvLf2NFPE-zUM9oHIgmtBN5TDGsaNSk"
+        src="https://media.licdn.com/dms/image/v2/D4D03AQF_sI9GKxjLsQ/profile-displayphoto-scale_200_200/B4DZnAo7HTJEAc-/0/1759873578149?e=1765411200&v=beta&t=mrN6qmIFB9b_MCeUn3iIKyntbbKVzP3GfbDzdJAgLyA"
         alt="Everton Tenorio"
       />
 
