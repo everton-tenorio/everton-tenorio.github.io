@@ -24,7 +24,7 @@ jobs:
         run: npx nuxi generate
 
       - name: CP CNAME
-        run: echo 'dev.evttenorio.com' > .output/public/CNAME
+        run: echo 'www.evertontenorio.dev' > .output/public/CNAME
 
       - name: Add .nojekyll
         run: touch .output/public/.nojekyll
