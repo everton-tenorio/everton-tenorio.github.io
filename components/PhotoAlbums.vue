@@ -256,13 +256,13 @@ const albums = ref<Album[]>([
       },
       {
         url: 'https://i.ibb.co/1JMBwVzn/d1f81d38-cebb-4610-a3a5-7e5631f33258-20251005-222330-0000.jpg',
-        caption: 'Algo sobre Redes na rede.',
+        caption: 'Algo sobre Redes.',
         location: '',
         date: ''
       },
       {
         url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/607499565_17871313959499597_2562320586422259249_n.webp?_nc_cat=111&ig_cache_key=MzgwMDE2Mzc1NzgzNDgwMzI5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=dUJzsIKbikYQ7kNvwGVdXJk&_nc_oc=Adl6wYQO87-ybNG-1wQbIfu0QHABWxUSROFFYIlVQWgb1mjSYqrY7lXBm2V_FXVSAPs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfqL3lKCIIRJR4BYriUBlE7g_WSV6m7a4qCNyrQFs0crVQ&oe=695FB697',
-        caption: 'Na época, lá no Feitosa, tecnologia era fazer "raia" com a palha do coqueiro.',
+        caption: 'Na época, tecnologia era fazer "raia" com a palha do coqueiro.',
         location: '',
         date: ''
       },
