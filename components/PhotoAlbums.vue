@@ -210,8 +210,8 @@ const showCaption = ref(true)
 const albums = ref<Album[]>([
   {
     id: 1,
-    title: 'Construindo',
-    description: 'posto mais em breve',
+    title: 'building in public',
+    description: 'bastidores',
     cover: 'https://i.ibb.co/d4HKMHvq/IMG-20251004-221443-478.jpg',
     images: [
       {
@@ -227,12 +227,6 @@ const albums = ref<Album[]>([
         date: ''
       },
       {
-        url: 'https://i.ibb.co/1JMBwVzn/d1f81d38-cebb-4610-a3a5-7e5631f33258-20251005-222330-0000.jpg',
-        caption: 'Redes?',
-        location: '',
-        date: ''
-      },
-      {
         url: 'https://i.ibb.co/0ySXb7WF/IMG-20251005-150609-083.jpg',
         caption: 'Aquela clássica, da tela',
         location: '',
@@ -242,38 +236,83 @@ const albums = ref<Album[]>([
     size: 'col-span-2 row-span-2',
     ratio: '1/1'
   },
-  /*{
+  {
     id: 2,
-    title: 'Web Development',
-    description: 'Vue.js & Nuxt Projects',
-    cover: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80',
+    title: '2025',
+    description: 'Transmutation. Mesmas coisas, diferentes formas.',
+    cover: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/608538008_17871313995499597_6849390420379537995_n.webp?_nc_cat=106&ig_cache_key=MzgwMDE2Mzc1NzgyNjQzNTM3Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=TiCRd4kc7pgQ7kNvwFXOdfz&_nc_oc=AdnHH4ia6CsnO5z81A2Cl9hjtBLcH0v_CCYDe6TgwDWnAZpyZ4LbTNjfuqPnasSbxj0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_Afq85u-75gIYejgHhnWkYV6y23_sB8xBITgUCACZp8shnw&oe=695FA60B',
     images: [
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80',
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=1200&q=80'
+      {
+        url: 'https://instagram.fcau17-1.fna.fbcdn.net/v/t51.82787-15/608181692_17871313923499597_1214614783177221180_n.webp?_nc_cat=101&ig_cache_key=MzgwMDE2Mzc1NzgwOTYwODAyMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=N-RdFYloBZsQ7kNvwEJ1icD&_nc_oc=AdnJCpwXD4ouWR53Gucgi-oAc2Zhy-a83koI9PMyIYqQMBIaGV9aXt63j9QVS0dHorY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau17-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_Afrh8OvMZh_1k1ezOqnMQCVVsYMUbOnGsTpMziWDLVEaHQ&oe=695F92DB',
+        caption: 'agora é portalfut.com',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/608237300_17871313932499597_6085642774028009563_n.webp?_nc_cat=103&ig_cache_key=MzgwMDE2Mzc1Nzk3NzQwOTI2Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=Vo0rr9xy0TIQ7kNvwF67KhX&_nc_oc=AdlViKiPB1WkOfGUExWwsGOguhSTNi5aBNYp73QtutexpsMnsMHzuJaTSUuvz9xvj4M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfqfUoDJQw3Ak8Tl--1wtcrii8KAhbqeWF979WcqFxMgvg&oe=695FA133',
+        caption: ':)',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://i.ibb.co/1JMBwVzn/d1f81d38-cebb-4610-a3a5-7e5631f33258-20251005-222330-0000.jpg',
+        caption: 'Algo sobre Redes na rede.',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/607499565_17871313959499597_2562320586422259249_n.webp?_nc_cat=111&ig_cache_key=MzgwMDE2Mzc1NzgzNDgwMzI5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=dUJzsIKbikYQ7kNvwGVdXJk&_nc_oc=Adl6wYQO87-ybNG-1wQbIfu0QHABWxUSROFFYIlVQWgb1mjSYqrY7lXBm2V_FXVSAPs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfqL3lKCIIRJR4BYriUBlE7g_WSV6m7a4qCNyrQFs0crVQ&oe=695FB697',
+        caption: 'Na época, lá no Feitosa, tecnologia era fazer "raia" com a palha do coqueiro.',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/608397947_17871313968499597_2828485715493993149_n.webp?_nc_cat=108&ig_cache_key=MzgwMDE2Mzc1NzgxODAyMzkxNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=01lYuB1RrQUQ7kNvwEQ5OgO&_nc_oc=Admdx03yfIM4hu_XNqc0gJLJhgZkJ0HCzMyN8rA0LfzfoKPwL9lyM4IC6kZChvfWazw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfqAB_1KoDigWJYeyupdpbEP__LJNPEx7BSla2zP6z4FMw&oe=695FABF4',
+        caption: 'Amiga da Laika pousando na Lua.',
+        location: '',
+        date: ''
+      },      
+      {
+        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/607560769_17871313986499597_4044514929876664853_n.webp?_nc_cat=103&ig_cache_key=MzgwMDE2Mzc1NzgxNzk5MzI1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=Gbp_MZo3YfkQ7kNvwEJnlUy&_nc_oc=AdnvV5Nj3tF_u_6cTbKEKVmxY3g7WIjKgyCKxg4r9_NmeJGoaqoY1nxKefiowLv2L1A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfpBaJM-6RT8CTSqO2jvWc3B_12dw1ZTVWgS-iYaJ8o8hQ&oe=695FA5EE',
+        caption: 'Na contenção.',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/608538008_17871313995499597_6849390420379537995_n.webp?_nc_cat=106&ig_cache_key=MzgwMDE2Mzc1NzgyNjQzNTM3Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=TiCRd4kc7pgQ7kNvwFXOdfz&_nc_oc=AdnHH4ia6CsnO5z81A2Cl9hjtBLcH0v_CCYDe6TgwDWnAZpyZ4LbTNjfuqPnasSbxj0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_Afq85u-75gIYejgHhnWkYV6y23_sB8xBITgUCACZp8shnw&oe=695FA60B',
+        caption: 'menos é mais.',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://instagram.fcau3-1.fna.fbcdn.net/v/t51.82787-15/608869859_17871314004499597_1860025000210258277_n.webp?_nc_cat=100&ig_cache_key=MzgwMDE2Mzc1NzgyNjM5MjU3MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=G04eYOTlGpEQ7kNvwHltXgI&_nc_oc=Adn90HnfvOSV8XCvUf5cC2WID-QHjIfUUeTMixeVnAqv_7EeOIX3tXjRtrBBdTSzeCU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau3-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_Afo3FZbjFfqb95KF-gEeBBYcc0vlkK-geHZDIaQhOQjAlQ&oe=695FB9C8',
+        caption: 'Flamengo.',
+        location: '',
+        date: ''
+      },          
     ],
     size: '',
-    ratio: '4/3'
+    ratio: '3/4'
   },
-  {
+  /*{
     id: 3,
     title: 'DevOps Pipeline',
     description: 'CI/CD & Automation',
-    cover: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&q=80',
+    cover: '',
     images: [
-      'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200&q=80',
-      'https://images.unsplash.com/photo-1667372393086-9d4001d51cf1?w=1200&q=80',
-      'https://images.unsplash.com/photo-1667372335937-d03be6fb0a9c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1605745341112-85968b19335b?w=1200&q=80'
+      '',
+      '',
+      '',
+      ''
     ],
     size: '',
     ratio: '4/3'
   },*/
   {
-    id: 2,
+    id: 3,
     title: 'Campus Party São Paulo - 2019',
     description: 'CPBR12',
-    cover: 'https://i.ibb.co/bgHJHFLd/IMG-20190216-112522.jpg',
+    cover: 'https://i.ibb.co/j90CsX3G/IMG-20190213-134152.jpg',
     images: [
       {
         url: 'https://i.ibb.co/Kxy1xtnH/IMG-20251005-012559-866.webp',
@@ -349,11 +388,11 @@ const albums = ref<Album[]>([
         date: ''
       }
     ],
-    size: 'md:col-span-2',
-    ratio: '3/4'
+    size: '',
+    ratio: '4/3'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Campus Party Natal - 2018',
     description: 'CPBR11',
     cover: 'https://i.ibb.co/NdP51wvk/IMG-20180411-200612.jpg',
@@ -378,7 +417,7 @@ const albums = ref<Album[]>([
       }
     ],
     size: '',
-    ratio: '3/4'
+    ratio: '4/3'
   },
 ])
 

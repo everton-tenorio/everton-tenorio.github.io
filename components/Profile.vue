@@ -4,7 +4,7 @@
       <!-- Foto de Perfil -->
       <img
         class="profile-image"
-        src="https://media.licdn.com/dms/image/v2/D4D03AQF_sI9GKxjLsQ/profile-displayphoto-scale_200_200/B4DZnAo7HTJEAc-/0/1759873578149?e=1765411200&v=beta&t=mrN6qmIFB9b_MCeUn3iIKyntbbKVzP3GfbDzdJAgLyA"
+        src="/images/evt.jpg"
         alt="Everton Tenorio"
       />
 
