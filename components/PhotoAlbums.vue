@@ -239,18 +239,12 @@ const albums = ref<Album[]>([
   {
     id: 2,
     title: '2025',
-    description: 'Transmutation. Mesmas coisas, diferentes formas.',
-    cover: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/608538008_17871313995499597_6849390420379537995_n.webp?_nc_cat=106&ig_cache_key=MzgwMDE2Mzc1NzgyNjQzNTM3Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=TiCRd4kc7pgQ7kNvwFXOdfz&_nc_oc=AdnHH4ia6CsnO5z81A2Cl9hjtBLcH0v_CCYDe6TgwDWnAZpyZ4LbTNjfuqPnasSbxj0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_Afq85u-75gIYejgHhnWkYV6y23_sB8xBITgUCACZp8shnw&oe=695FA60B',
+    description: 'Transmutação: Mesmas coisas, diferentes formas.', 
+    cover: 'https://i.ibb.co/tTytZWFP/notebook.webp',
     images: [
       {
-        url: 'https://instagram.fcau17-1.fna.fbcdn.net/v/t51.82787-15/608181692_17871313923499597_1214614783177221180_n.webp?_nc_cat=101&ig_cache_key=MzgwMDE2Mzc1NzgwOTYwODAyMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=N-RdFYloBZsQ7kNvwEJ1icD&_nc_oc=AdnJCpwXD4ouWR53Gucgi-oAc2Zhy-a83koI9PMyIYqQMBIaGV9aXt63j9QVS0dHorY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau17-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_Afrh8OvMZh_1k1ezOqnMQCVVsYMUbOnGsTpMziWDLVEaHQ&oe=695F92DB',
+        url: 'https://i.ibb.co/LDkLC6gG/portalfut-com.webp',
         caption: 'agora é portalfut.com',
-        location: '',
-        date: ''
-      },
-      {
-        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/608237300_17871313932499597_6085642774028009563_n.webp?_nc_cat=103&ig_cache_key=MzgwMDE2Mzc1Nzk3NzQwOTI2Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=Vo0rr9xy0TIQ7kNvwF67KhX&_nc_oc=AdlViKiPB1WkOfGUExWwsGOguhSTNi5aBNYp73QtutexpsMnsMHzuJaTSUuvz9xvj4M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfqfUoDJQw3Ak8Tl--1wtcrii8KAhbqeWF979WcqFxMgvg&oe=695FA133',
-        caption: ':)',
         location: '',
         date: ''
       },
@@ -261,31 +255,37 @@ const albums = ref<Album[]>([
         date: ''
       },
       {
-        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/607499565_17871313959499597_2562320586422259249_n.webp?_nc_cat=111&ig_cache_key=MzgwMDE2Mzc1NzgzNDgwMzI5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=dUJzsIKbikYQ7kNvwGVdXJk&_nc_oc=Adl6wYQO87-ybNG-1wQbIfu0QHABWxUSROFFYIlVQWgb1mjSYqrY7lXBm2V_FXVSAPs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfqL3lKCIIRJR4BYriUBlE7g_WSV6m7a4qCNyrQFs0crVQ&oe=695FB697',
+        url: 'https://i.ibb.co/Wv4jbHKr/coqueiro.webp',
         caption: 'Na época, tecnologia era fazer "raia" com a palha do coqueiro.',
         location: '',
         date: ''
       },
       {
-        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/608397947_17871313968499597_2828485715493993149_n.webp?_nc_cat=108&ig_cache_key=MzgwMDE2Mzc1NzgxODAyMzkxNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=01lYuB1RrQUQ7kNvwEQ5OgO&_nc_oc=Admdx03yfIM4hu_XNqc0gJLJhgZkJ0HCzMyN8rA0LfzfoKPwL9lyM4IC6kZChvfWazw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfqAB_1KoDigWJYeyupdpbEP__LJNPEx7BSla2zP6z4FMw&oe=695FABF4',
+        url: 'https://i.ibb.co/LzRNqkQt/laika.webp',
         caption: 'Amiga da Laika pousando na Lua.',
+        location: '',
+        date: ''
+      },
+      {
+        url: 'https://i.ibb.co/NXMDHcs/rindo.webp',
+        caption: 'E a caramelo vai endoidar é?',
         location: '',
         date: ''
       },      
       {
-        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/607560769_17871313986499597_4044514929876664853_n.webp?_nc_cat=103&ig_cache_key=MzgwMDE2Mzc1NzgxNzk5MzI1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=Gbp_MZo3YfkQ7kNvwEJnlUy&_nc_oc=AdnvV5Nj3tF_u_6cTbKEKVmxY3g7WIjKgyCKxg4r9_NmeJGoaqoY1nxKefiowLv2L1A&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_AfpBaJM-6RT8CTSqO2jvWc3B_12dw1ZTVWgS-iYaJ8o8hQ&oe=695FA5EE',
+        url: 'https://i.ibb.co/tp2nV6tb/starwars.webp',
         caption: 'Na contenção.',
         location: '',
         date: ''
       },
       {
-        url: 'https://instagram.fcau18-1.fna.fbcdn.net/v/t51.82787-15/608538008_17871313995499597_6849390420379537995_n.webp?_nc_cat=106&ig_cache_key=MzgwMDE2Mzc1NzgyNjQzNTM3Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=TiCRd4kc7pgQ7kNvwFXOdfz&_nc_oc=AdnHH4ia6CsnO5z81A2Cl9hjtBLcH0v_CCYDe6TgwDWnAZpyZ4LbTNjfuqPnasSbxj0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau18-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_Afq85u-75gIYejgHhnWkYV6y23_sB8xBITgUCACZp8shnw&oe=695FA60B',
-        caption: 'menos é mais.',
+        url: 'https://i.ibb.co/tTytZWFP/notebook.webp',
+        caption: 'Quando menos é mais.',
         location: '',
         date: ''
       },
       {
-        url: 'https://instagram.fcau3-1.fna.fbcdn.net/v/t51.82787-15/608869859_17871314004499597_1860025000210258277_n.webp?_nc_cat=100&ig_cache_key=MzgwMDE2Mzc1NzgyNjM5MjU3MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzIifQ%3D%3D&_nc_ohc=G04eYOTlGpEQ7kNvwHltXgI&_nc_oc=Adn90HnfvOSV8XCvUf5cC2WID-QHjIfUUeTMixeVnAqv_7EeOIX3tXjRtrBBdTSzeCU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcau3-1.fna&_nc_gid=RzBUESVGZ7QHnfhQkEcVtA&oh=00_Afo3FZbjFfqb95KF-gEeBBYcc0vlkK-geHZDIaQhOQjAlQ&oe=695FB9C8',
+        url: 'https://i.ibb.co/mVJhyj1P/flamengo.webp',
         caption: 'Flamengo.',
         location: '',
         date: ''
